@@ -14,7 +14,7 @@ app = FastAPI()
 {}
 
 currentdatetime = datetime.datetime.now()
-chunk_size = (10*1024*1024)
+chunk_size = (10*1024)
 
 
 @app.post("/imagetest/")
@@ -55,12 +55,20 @@ def post_data(
             base64_string = base64.b64encode(buf.getvalue()).decode()
 
         else:
-            return JSONResponse(status_code=404, content={"message": "File size mast be lessthan 10 MB"})
+            return JSONResponse(
+            {"data": None,
+             "error": {
+                 "type":"input_error",
+                 "field":"image_file",
+                 "message":"image file size mast be less than 10MB"
+                      },
+             "status":"falied"
+             })
 
         data = {
             "basestring": base64_string,
             "reference_id": input_data['reference_id'],
-            "time_stamp": currentdatetime,
+            "time_stamp": "currentdatetime",
             "processtime": (time.time() - process_start_time),
         }
         status = "success"
