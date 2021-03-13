@@ -17,6 +17,3 @@ class ImageSchema(Schema):
     def reference_id_validate(self,value):
         if not value.isalnum():
             raise ValidationError('reference_id must be alphanumeric')
-
-class date():
-    cu = datetime.now()
