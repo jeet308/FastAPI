@@ -8,13 +8,13 @@ import base64
 import time
 import os
 import io
-import datetime
+from datetime import datetime
 
 app = FastAPI()
 {}
 
-currentdatetime = datetime.datetime.now()
-chunk_size = (10*1024)
+time_stamp = datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
+chunk_size = (10*1024*1024)
 
 
 @app.post("/imagetest/")
@@ -31,53 +31,66 @@ def post_data(
     path = os.getcwd()
     temp_file = os.path.join(path, image_file.filename)
 
-    image = Image.open(temp_file)
-    #image_format = image.format
+    file_name,file_extension = os.path.splitext(temp_file)
 
-    image_file_size = os.path.getsize(temp_file)
+    if file_extension in ['.jpg','.jpeg','.png']:
 
-    try:
-        input_data = sm.ImageSchema().load(
-            {"reference_id": reference_id,
-             "resize_width": resize_width,
-             "company_name": company_name,
-             "quality_check": quality_check,
-             "image_format": image_format
-             })
+        image = Image.open(temp_file)
+        image_file_size = os.path.getsize(temp_file)
 
-        if (image_file_size < chunk_size):
-            wpercent = (input_data['resize_width'] / float(image.size[0]))
-            hsize = int((float(image.size[1]) * float(wpercent)))
-            image = image.resize(
-                (input_data['resize_width'], hsize), Image.ANTIALIAS)
-            buf = io.BytesIO()
-            image.save(buf, format='JPEG')
-            base64_string = base64.b64encode(buf.getvalue()).decode()
+        try:
+            input_data = sm.ImageSchema().load(
+                {"reference_id": reference_id,
+                "resize_width": resize_width,
+                "company_name": company_name,
+                "quality_check": quality_check,
+                "image_format": image_format
+                })
 
-        else:
-            return JSONResponse(
-            {"data": None,
-             "error": {
-                 "type":"input_error",
-                 "field":"image_file",
-                 "message":"image file size mast be less than 10MB"
-                      },
-             "status":"falied"
-             })
+            if (image_file_size < chunk_size):
+                wpercent = (input_data['resize_width'] / float(image.size[0]))
+                hsize = int((float(image.size[1]) * float(wpercent)))
+                image = image.resize(
+                    (input_data['resize_width'], hsize), Image.ANTIALIAS)
+                buf = io.BytesIO()
+                image.save(buf, format='JPEG')
+                base64_string = base64.b64encode(buf.getvalue()).decode()
 
-        data = {
-            "basestring": base64_string,
-            "reference_id": input_data['reference_id'],
-            "time_stamp": "currentdatetime",
-            "processtime": (time.time() - process_start_time),
-        }
-        status = "success"
-        error = None
-        status_code = 200
-    except sm.ValidationError as e:
-        data = None
-        status = "falied"
-        error = str(e)
-        status_code = 400
+            else:
+                return JSONResponse(
+                {"data": None,
+                "error": {
+                    "type":"input_error",
+                    "field":"image_file",
+                    "message":"file size mast be less than 10MB"
+                        },
+                "status":"falied"
+                })
+
+            data = {
+                "basestring": base64_string,
+                "reference_id": input_data['reference_id'],
+                "time_stamp": time_stamp,
+                "processtime": (time.time() - process_start_time),
+            }
+            status = "success"
+            error = None
+            status_code = 200
+        except sm.ValidationError as e:
+            data = None
+            status = "falied"
+            error = str(e)
+            status_code = 400
+
+    else:
+                return JSONResponse(
+                {"data": None,
+                "error": {
+                    "type":"input_error",
+                    "field":"image_file",
+                    "message":"file formate not support"
+                        },
+                "status":"falied"
+                })   
 
     return JSONResponse({"data": data, "error": error, status: status}, status_code=status_code)
