@@ -91,6 +91,6 @@ def post_data(
                     "message":"file formate not support"
                         },
                 "status":"falied"
-                })   
+                },status_code=400)   
 
     return JSONResponse({"data": data, "error": error, status: status}, status_code=status_code)
