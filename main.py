@@ -65,7 +65,7 @@ def post_data(
                     "message":"file size mast be less than 10MB"
                         },
                 "status":"falied"
-                })
+                },status_code=400)
 
             data = {
                 "basestring": base64_string,
