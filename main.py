@@ -2,6 +2,7 @@ from fastapi import FastAPI, UploadFile, Form, File
 from typing import Optional
 from fastapi.responses import JSONResponse, PlainTextResponse
 import schema as sm
+import filepath as pt
 
 from PIL import Image
 import base64
@@ -28,14 +29,15 @@ def post_data(
 ):
 
     process_start_time = time.time()
-    path = os.getcwd()
-    temp_file = os.path.join(path, image_file.filename)
+    path = pt.pathfound(image_file.filename)
+    temp_file = os.path.join(path)
+    image = Image.open(path)
 
-    file_name,file_extension = os.path.splitext(temp_file)
+    file_name,file_extension = os.path.splitext(image_file.filename)
 
     if file_extension in ['.jpg','.jpeg','.png']:
 
-        image = Image.open(temp_file)
+        
         image_file_size = os.path.getsize(temp_file)
 
         try:
@@ -53,7 +55,10 @@ def post_data(
                 image = image.resize(
                     (input_data['resize_width'], hsize), Image.ANTIALIAS)
                 buf = io.BytesIO()
-                image.save(buf, format='JPEG')
+                if file_extension in ['jpg','jpeg']:
+                    image.save(buf, format='JPEG')
+                else:
+                    image.save(buf, format='PNG')
                 base64_string = base64.b64encode(buf.getvalue()).decode()
 
             else:
@@ -79,7 +84,11 @@ def post_data(
         except sm.ValidationError as e:
             data = None
             status = "falied"
-            error = str(e)
+            error = {
+                    "type":"validator_error",
+                    "field":"image_file",
+                    "message":str(e)
+                    },
             status_code = 400
 
     else:
