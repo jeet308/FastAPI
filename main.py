@@ -10,6 +10,7 @@ import os
 from io import BytesIO
 import io
 from datetime import datetime
+import json  
 
 app = FastAPI()
 {}
@@ -86,7 +87,8 @@ async def post_data(
         except sm.ValidationError as e:
             data = None
             status = "falied"
-            error = str(e)
+            dict_error = str(e) 
+            error = json.dumps(dict_error)  
             status_code = 400
 
     else:
