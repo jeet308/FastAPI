@@ -2,12 +2,12 @@ from fastapi import FastAPI, UploadFile, Form, File
 from typing import Optional
 from fastapi.responses import JSONResponse, PlainTextResponse
 import schema as sm
-import filepath as pt
 
 from PIL import Image
 import base64
 import time
 import os
+from io import BytesIO
 import io
 from datetime import datetime
 
@@ -15,30 +15,31 @@ app = FastAPI()
 {}
 
 time_stamp = datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
-chunk_size = (10*1024*1024)
+chunk_size = (10*1024)
 
 
 @app.post("/imagetest/")
-def post_data(
+async def post_data(
     reference_id: str = Form(None),
     resize_width: str = Form('1028'),
     company_name: str = Form(None),
     image_format: str = Form(None),
     quality_check: str = Form('True'),
-    image_file: UploadFile = File(...)
+    image_file: UploadFile = File(...),
 ):
 
     process_start_time = time.time()
-    path = pt.pathfound(image_file.filename)
-    temp_file = os.path.join(path)
-    image = Image.open(path)
+    #path = pt.pathfound(image_file.filename)
+    #temp_file = os.path.join(path)
+    image = read_imagefile(await image_file.read())
+
+    image_file_size = len(image_file.filename)
 
     file_name,file_extension = os.path.splitext(image_file.filename)
 
     if file_extension in ['.jpg','.jpeg','.png']:
-
         
-        image_file_size = os.path.getsize(temp_file)
+        #image_file_size = os.path.getsize(temp_file)
 
         try:
             input_data = sm.ImageSchema().load(
@@ -77,6 +78,7 @@ def post_data(
                 "reference_id": input_data['reference_id'],
                 "time_stamp": time_stamp,
                 "processtime": (time.time() - process_start_time),
+                "size":image_file_size
             }
             status = "success"
             error = None
@@ -84,11 +86,7 @@ def post_data(
         except sm.ValidationError as e:
             data = None
             status = "falied"
-            error = {
-                    "type":"validator_error",
-                    "field":"image_file",
-                    "message":str(e)
-                    },
+            error = str(e)
             status_code = 400
 
     else:
@@ -103,3 +101,9 @@ def post_data(
                 },status_code=400)   
 
     return JSONResponse({"data": data, "error": error, status: status}, status_code=status_code)
+
+
+
+def read_imagefile(file):
+    image = Image.open(BytesIO(file))
+    return image
