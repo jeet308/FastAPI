@@ -8,10 +8,18 @@ class ImageSchema(Schema):
         error_messages={
             "message": "reference_id is required."},
         validate=[validate.Length(equal=6)])
+
+    resize_with_width = fields.Bool()
+
     resize_width = fields.Int(required=True,
                               validate=validate.Range(min=1, max=1920),
                               error_messages={
                                   "message": "resize_width is required."})
+
+    resize_height = fields.Int(required=True,
+                              validate=validate.Range(min=1, max=1920),
+                              error_messages={
+                                  "message": "resize_height is required."})
     
     company_name = fields.Str(required=True,
                               validate=validate.Length(min=1, max=30),
