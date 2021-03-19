@@ -21,10 +21,12 @@ chunk_size = (10*1024*1024)
 @app.post("/imagetest/",responses={200: {'model': sm.Example}})
 async def post_data(
     reference_id: str = Form(None),
-    resize_width: str = Form('1028'),
+    resize_with_width: bool = Form(True),
+    resize_width: int = Form('1028'),
+    resize_height: int = Form('1028'),
     company_name: str = Form(None),
     image_format: str = Form(None),
-    quality_check: str = Form('True'),
+    quality_check: bool = Form(True),
     image_file: UploadFile = File(...),
 ):
     process_start_time = time.time()
@@ -41,15 +43,23 @@ async def post_data(
             input_data = sm.ImageSchema().load(
                 {"reference_id": reference_id,
                  "resize_width": resize_width,
+                 "resize_height": resize_height,
                  "company_name": company_name,
                  "quality_check": quality_check,
                  "image_format": image_format
                  })
             if (image_file_size < chunk_size):
-                wpercent = (input_data['resize_width'] / float(image.size[0]))
-                hsize = int((float(image.size[1]) * float(wpercent)))
-                image = image.resize(
-                    (input_data['resize_width'], hsize), Image.ANTIALIAS)
+
+                if resize_with_width == True :
+                    wpercent = (input_data['resize_width'] / float(image.size[0]))
+                    hsize = int((float(image.size[1]) * float(wpercent)))
+                    image = image.resize(
+                        (input_data['resize_width'], hsize), Image.ANTIALIAS)
+                else:
+                    hpercent = (input_data['resize_height']  / float(image.size[1]))
+                    wsize = int((float(image.size[0]) * float(hpercent)))
+                    image = image.resize((wsize, input_data['resize_height']), Image.ANTIALIAS)
+
                 buf = io.BytesIO()
                 if file_extension in ['jpg', 'jpeg']:
                     image.save(buf, format='JPEG')
@@ -71,7 +81,6 @@ async def post_data(
                 "reference_id": input_data['reference_id'],
                 "time_stamp": time_stamp,
                 "processtime": (time.time() - process_start_time),
-                "size": image_file_size
             }
             status = "success"
             error = None
