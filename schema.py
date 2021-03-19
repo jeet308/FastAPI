@@ -47,6 +47,7 @@ class Example(BaseModel):
         schema_extra = {
             "example": {
                 "reference_id":  "abcd12",
+                "resize_with_width":True,
                 "resize_width":  1250,
                 "resize_height": 500,
                 "company_name":  "frslabs",
