@@ -11,10 +11,11 @@ import io
 from datetime import datetime
 import json
 
+
 app = FastAPI()
 {}
 time_stamp = datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
-chunk_size = (10*1024)
+chunk_size = (10*1024*1024)
 
 
 @app.post("/imagetest/")
@@ -27,13 +28,15 @@ async def post_data(
     image_file: UploadFile = File(...),
 ):
     process_start_time = time.time()
-    #path = pt.pathfound(image_file.filename)
-    #temp_file = os.path.join(path)
-    image = read_imagefile(await image_file.read())
-    image_file_size = len(image_file.filename)
-    file_name, file_extension = os.path.splitext(image_file.filename)
+
+    file_extension = os.path.splitext(image_file.filename)[-1]
+    
     if file_extension in ['.jpg', '.jpeg', '.png']:
-        #image_file_size = os.path.getsize(temp_file)
+
+        image = read_imagefile(await image_file.read())
+        
+        image_file_size = len(image.fp.read())
+
         try:
             input_data = sm.ImageSchema().load(
                 {"reference_id": reference_id,
@@ -68,7 +71,6 @@ async def post_data(
                 "reference_id": input_data['reference_id'],
                 "time_stamp": time_stamp,
                 "processtime": (time.time() - process_start_time),
-                "size": image_file_size
             }
             status = "success"
             error = None
