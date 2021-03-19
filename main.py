@@ -18,7 +18,7 @@ time_stamp = datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
 chunk_size = (10*1024*1024)
 
 
-@app.post("/imagetest/")
+@app.post("/imagetest/",responses={200: {'model': sm.Example}})
 async def post_data(
     reference_id: str = Form(None),
     resize_width: str = Form('1028'),
@@ -71,6 +71,7 @@ async def post_data(
                 "reference_id": input_data['reference_id'],
                 "time_stamp": time_stamp,
                 "processtime": (time.time() - process_start_time),
+                "size": image_file_size
             }
             status = "success"
             error = None
