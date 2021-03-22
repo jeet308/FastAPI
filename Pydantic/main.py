@@ -37,7 +37,7 @@ def convert_error(exc):
         temp_type = data['type']
         error_fields.append({temp_field: {'meesage': temp_mes}})
         error_types.append(temp_type)
-    return {"type": "value_error", "fields": error_fields}
+    return {"type": "ValidationError", "fields": error_fields}
 
 
 class ImageModel(BaseModel):
@@ -52,15 +52,33 @@ class ImageModel(BaseModel):
     @validator('reference_id')
     def reference_id_alphanumeric(cls, v):
         if not v.isalnum():
-            raise ValueError('must be alphanumeric')
+            raise ValueError('reference_id must be alphanumeric')
         if len(v) != 6:
-            raise ValueError('must be length 6')
+            raise ValueError('reference_id length must be 6')
+        return v
+        
+    @validator('company_name')
+    def companyname_length(cls, v):
+        if len(v)<0 and len(v)<30 :
+            raise ValueError('company name btween 0 to 30')
+        return v
+    
+    @validator('resize_width')
+    def resize_width_check(cls, v):
+        if v < 100 or v >= 1920 :
+            raise ValueError('resize width mast be 1 to 1920')
+        return v
+    
+    @validator('resize_height')
+    def resize_height_check(cls, v):
+        if v < 100 or v >= 1920 :
+            raise ValueError('resize height mast be 1 to 1920')
         return v
 
     @validator('image_format')
     def image_must_contain(cls, v):
         if v not in ['jpg', 'jpeg', 'png']:
-            raise ValueError('must be')
+            raise ValueError(f'{v} image_format is not supported')
         return v
 
     class Config:
@@ -83,14 +101,13 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
 
 
 @app.post(path="/test",responses={200: {'model': ImageModel}})
-async def get_response(reference_id: str = Form(..., len=6),
-                       company_name: str = Form(..., min_length=0, max_length=30,
-                                                description="User name of the client"),
-                       resize_width: int = Form(..., gt=1, lt=1920),
-                       resize_height: int = Form(..., gt=1, lt=1920),
-                       image_format: str = Form(...),
-                       quality_check: bool = Form(True),
-                       image_file: UploadFile = File(...),
+async def get_response(reference_id: str = Form(...,description="Reference id"),
+                       company_name: str = Form(...,description="company name of the client "),
+                       resize_width: int = Form(...,description="image resize width "),
+                       resize_height: int = Form(...,description="image resizeheight "),
+                       image_format: str = Form(...,description="image file format "),
+                       quality_check: bool = Form(True,description="image quality check"),
+                       image_file: UploadFile = File(...,description="image file"),
                        ):
 
     process_start_time = time.time()
@@ -160,5 +177,4 @@ async def get_response(reference_id: str = Form(..., len=6),
                 "status": "falied"
              }, status_code=400)
 
-    return JSONResponse({"data": data, "status": status, "error": error}, status_code=status_code)
-
+    return JSONResponse({"data": data, "error": error, "status": status}, status_code=status_code)
