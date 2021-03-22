@@ -3,45 +3,52 @@ from datetime import datetime
 from pydantic import BaseModel
 
 class ImageSchema(Schema):
-    reference_id = fields.Str(
-        required=True,
-        error_messages={
-            "message": "reference_id is required."},
-        validate=[validate.Length(equal=6)])
-
-    resize_width = fields.Int(required=True,
-                              validate=validate.Range(min=1, max=1920),
-                              error_messages={
-                                  "message": "resize_width is required."})
-
-    resize_height = fields.Int(required=True,
-                              validate=validate.Range(min=1, max=1920),
-                              error_messages={
-                                  "message": "resize_height is required."})
     
-    company_name = fields.Str(required=True,
-                              validate=validate.Length(min=1, max=30),
-                              error_messages={
-                                  "message": "company_name is required."})
+    reference_id = fields.Str()
+    resize_width = fields.Int()
+    resize_height = fields.Int()
+    company_name = fields.Str()
     image_format = fields.Str()
     quality_check = fields.Bool()
+    
 
-    @validates_schema
-    def validate_b_requires_a(self, data):
-        if 'resize_width' in data and 'resize_height' not in data:
-            raise ValidationError('field_a is required when field_b is set')
-
-    @validates("image_format")
-    def validate_quantity(self, value):
-        if value not in ['jpg', 'jpeg', 'png']:
-            raise ValidationError({
-                "message": f"{value} image_format is not supported"})
-
-    @validates("reference_id")
-    def reference_id_validate(self, value):
-        if not value.isalnum():
+    @validates('reference_id')
+    def reference_id_validate(cls, v):
+        if not v.isalnum():
             raise ValidationError({
                 "message": "reference_id must be alphanumeric"})
+        if len(v) != 6:
+            raise ValidationError({
+                "message": "reference_id length must be 6"})
+        return v
+
+    @validates('company_name')
+    def companyname_length(cls, v):
+        if len(v)<0 and len(v)<30 :
+            raise ValidationError({
+                "message": "company name btween 0 to 30"})
+        return v
+
+    @validates('resize_width')
+    def resize_width_check(cls, v):
+        if v < 100 or v >= 1920 :
+            raise ValidationError({
+                "message": 'resize width mast be 1 to 1920'})
+        return v
+    
+    @validates('resize_height')
+    def resize_height_check(cls, v):
+        if v < 100 or v >= 1920 :
+            raise ValidationError({
+                "message": 'resize height mast be 1 to 1920'})
+        return v
+
+    @validates('image_format')
+    def image_must_contain(cls, v):
+        if v not in ['jpg', 'jpeg', 'png']:
+            raise ValidationError({
+                "message": f'{v} image_format is not supported'})
+        return v
 
     
 class Example(BaseModel):
