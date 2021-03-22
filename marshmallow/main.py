@@ -1,6 +1,7 @@
-from fastapi import FastAPI, UploadFile, Form, File
+from fastapi import FastAPI, UploadFile, Form, File, Request, status
 from typing import Optional
 from fastapi.responses import JSONResponse, PlainTextResponse
+from fastapi.exceptions import RequestValidationError
 import schema as sm
 from PIL import Image
 import base64
@@ -18,15 +19,21 @@ time_stamp = datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
 chunk_size = (10*1024*1024)
 
 
+@app.exception_handler(RequestValidationError)
+async def validation_exception_handler(request: Request, exc: RequestValidationError):
+    error_out = convert_error_string(exc.errors())
+    return JSONResponse({"data": None, "status": "failed", "error": error_out}, status_code=status.HTTP_422_UNPROCESSABLE_ENTITY)
+
+
 @app.post("/imagetest/",responses={200: {'model': sm.Example}})
 async def post_data(
-    reference_id: str = Form(None),
-    resize_width: int = Form('1028'),
-    resize_height: int = Form('1028'),
-    company_name: str = Form(None),
-    image_format: str = Form(None),
-    quality_check: bool = Form(True),
-    image_file: UploadFile = File(...),
+    reference_id: str = Form(...,description="Reference id"),
+    company_name: str = Form(...,description="company name of the client "),
+    resize_width: int = Form(...,description="image resize width "),
+    resize_height: int = Form(...,description="image resizeheight "),
+    image_format: str = Form(...,description="image file format "),
+    quality_check: bool = Form(True,description="image quality check"),
+    image_file: UploadFile = File(...,description="image file"),
 ):
     process_start_time = time.time()
 
@@ -94,7 +101,7 @@ async def post_data(
              },
                 "status": "falied"
              }, status_code=400)
-    return JSONResponse({"data": data, "error": error, status: status}, status_code=status_code)
+    return JSONResponse({"data": data, "error": error, "status": status}, status_code=status_code)
 
 
 def read_imagefile(file):
