@@ -1,5 +1,4 @@
-from marshmallow import Schema, fields, validate, ValidationError, validates, validates_schema
-from datetime import datetime
+from marshmallow import Schema, fields, validate, ValidationError, validates
 from pydantic import BaseModel
 
 class ImageSchema(Schema):
@@ -16,38 +15,41 @@ class ImageSchema(Schema):
     def reference_id_validate(cls, v):
         if not v.isalnum():
             raise ValidationError({
-                "message": "reference_id must be alphanumeric"})
+                "message": "reference id must be alphanumeric"})
         if len(v) != 6:
             raise ValidationError({
-                "message": "reference_id length must be 6"})
+                "message": "reference id length must be 6"})
         return v
 
     @validates('company_name')
     def companyname_length(cls, v):
+        if not v.isalpha():
+            raise ValidationError({
+                "message": "company name must be alphabetic only"})
         if len(v)<0 and len(v)<30 :
             raise ValidationError({
-                "message": "company name btween 0 to 30"})
+                "message": "company name length must be 1 to 30 characters"})
         return v
 
     @validates('resize_width')
     def resize_width_check(cls, v):
-        if v < 100 or v >= 1920 :
+        if v < 1 or v >= 1920 :
             raise ValidationError({
-                "message": 'resize width mast be 1 to 1920'})
+                "message": 'resize width must be 1 to 1920'})
         return v
     
     @validates('resize_height')
     def resize_height_check(cls, v):
-        if v < 100 or v >= 1920 :
+        if v < 1 or v >= 1920 :
             raise ValidationError({
-                "message": 'resize height mast be 1 to 1920'})
+                "message": 'resize height must be 1 to 1920'})
         return v
 
     @validates('image_format')
     def image_must_contain(cls, v):
-        if v not in ['jpg', 'jpeg', 'png']:
+        if v not in ['jpg', 'jpeg', 'png', 'tiff', 'tif', '.webp']:
             raise ValidationError({
-                "message": f'{v} image_format is not supported'})
+                "message": f'{v} image format is not supported'})
         return v
 
     
