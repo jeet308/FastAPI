@@ -130,11 +130,8 @@ def convert_error_string(error):
 
 def convert_error(exc):
     error_fields = []
-    error_types = []
     for data in exc:
         temp_field = data['loc'][1] if len(data['loc']) > 1 else data['loc'][0]
         temp_mes = data['msg']
-        temp_type = data['type']
         error_fields.append({temp_field: {'meesage': temp_mes}})
-        error_types.append(temp_type)
     return {"type": "ValidationError", "fields": error_fields}
