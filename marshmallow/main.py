@@ -16,10 +16,6 @@ app = FastAPI()
 time_stamp = datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
 chunk_size = (10*1024*1024)
 
-@app.exception_handler(RequestValidationError)
-async def validation_exception_handler(request: Request, exc: RequestValidationError):
-    error_out = convert_error_string(exc.errors())
-    return JSONResponse({"data": None, "status": "failed", "error": error_out}, status_code=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
 @app.post("/imagetest/",responses={200: {'model': sm.Example}})
 async def post_data(
@@ -110,8 +106,6 @@ async def post_data(
             
     os.remove(path)
     return JSONResponse({"data": data, "error": error, "status": status}, status_code=status_code)
-
-
 
 
 def save_file(file):
