@@ -22,7 +22,7 @@ class ImageSchema(Schema):
         return v
 
     @validates('company_name')
-    def companyname_length(cls, v):
+    def company_name_validate(cls, v):
         if not v.isalpha():
             raise ValidationError({
                 "message": "company name must be alphabetic only"})
@@ -32,24 +32,24 @@ class ImageSchema(Schema):
         return v
 
     @validates('resize_width')
-    def resize_width_check(cls, v):
+    def resize_width_validate(cls, v):
         if v < 1 or v >= 1920 :
             raise ValidationError({
                 "message": 'resize width must be 1 to 1920'})
         return v
     
     @validates('resize_height')
-    def resize_height_check(cls, v):
+    def resize_height_validate(cls, v):
         if v < 1 or v >= 1920 :
             raise ValidationError({
                 "message": 'resize height must be 1 to 1920'})
         return v
 
     @validates('image_format')
-    def image_must_contain(cls, v):
-        if v not in ['jpg', 'jpeg', 'png', 'tiff', 'tif', '.webp']:
+    def image_format_validate(cls, v):
+        if v not in ['jpg', 'jpeg', 'png', 'tiff', 'tif', 'webp']:
             raise ValidationError({
-                "message": f'{v} image format is not supported'})
+                "message": f'{v} file is not supported'})
         return v
 
     
@@ -59,10 +59,10 @@ class Example(BaseModel):
         schema_extra = {
             "example": {
                 "reference_id":  "abcd12",
-                "resize_width":  1250,
-                "resize_height": 500,
+                "resize_width":  500,
+                "resize_height": 200,
                 "company_name":  "frslabs",
                 "image_format":  "png",
-                "quality_check": True,
+                "quality_check":  False,
             }
         }
