@@ -16,6 +16,14 @@ app = FastAPI()
 time_stamp = datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
 chunk_size = (10*1024*1024)
 
+@app.exception_handler(RequestValidationError)
+async def validation_exception_handler(request: Request, exc: RequestValidationError):
+    error_out = convert_error(exc.errors())
+    return JSONResponse(
+        {"data": None,
+         "error": error_out,
+         "status": "failed"},
+          status_code=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
 @app.post("/imagetest/",responses={200: {'model': sm.Example}})
 async def post_data(
@@ -119,3 +127,14 @@ def convert_error_string(error):
     for key in error:
         new_error.update({key: {"message": error[key]}})
     return new_error
+
+def convert_error(exc):
+    error_fields = []
+    error_types = []
+    for data in exc:
+        temp_field = data['loc'][1] if len(data['loc']) > 1 else data['loc'][0]
+        temp_mes = data['msg']
+        temp_type = data['type']
+        error_fields.append({temp_field: {'meesage': temp_mes}})
+        error_types.append(temp_type)
+    return {"type": "ValidationError", "fields": error_fields}
