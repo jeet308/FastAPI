@@ -21,25 +21,6 @@ app = FastAPI()
 time_stamp = datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
 chunk_size = (10*1024*1024)
 
-
-def read_imagefile(file):
-    image = Image.open(BytesIO(file))
-    return image
-
-
-def convert_error(exc):
-    error = {}
-    error_fields = []
-    error_types = []
-    for data in exc:
-        temp_field = data['loc'][1] if len(data['loc']) > 1 else data['loc'][0]
-        temp_mes = data['msg']
-        temp_type = data['type']
-        error_fields.append({temp_field: {'meesage': temp_mes}})
-        error_types.append(temp_type)
-    return {"type": "ValidationError", "fields": error_fields}
-
-
 class ImageModel(BaseModel):
 
     reference_id: str
@@ -50,35 +31,37 @@ class ImageModel(BaseModel):
     quality_check: bool
 
     @validator('reference_id')
-    def reference_id_alphanumeric(cls, v):
+    def reference_id_validate(cls, v):
         if not v.isalnum():
-            raise ValueError('reference_id must be alphanumeric')
+            raise ValueError('reference id must be alphanumeric')
         if len(v) != 6:
-            raise ValueError('reference_id length must be 6')
+            raise ValueError('reference id length must be 6')
         return v
         
     @validator('company_name')
-    def companyname_length(cls, v):
+    def company_name_validate(cls, v):
+        if not v.isalpha():
+            raise ValueError("company name must be alphabetic only")
         if len(v)<0 and len(v)<30 :
-            raise ValueError('company name btween 0 to 30')
+            raise ValueError('company name length must be 1 to 30 characters')
         return v
     
     @validator('resize_width')
-    def resize_width_check(cls, v):
-        if v < 100 or v >= 1920 :
-            raise ValueError('resize width mast be 1 to 1920')
+    def resize_width_validate(cls, v):
+        if v < 1 or v >= 1920 :
+            raise ValueError('resize width must be 1 to 1920')
         return v
     
     @validator('resize_height')
-    def resize_height_check(cls, v):
-        if v < 100 or v >= 1920 :
-            raise ValueError('resize height mast be 1 to 1920')
+    def resize_height_validate(cls, v):
+        if v < 1 or v >= 1920 :
+            raise ValueError('resize height must be 1 to 1920')
         return v
 
     @validator('image_format')
-    def image_must_contain(cls, v):
-        if v not in ['jpg', 'jpeg', 'png']:
-            raise ValueError(f'{v} image_format is not supported')
+    def image_format_validate(cls, v):
+        if v not in ['jpg', 'jpeg', 'png', 'tiff', 'tif', 'webp']:
+            raise ValueError(f'{v} file is not supported')
         return v
 
     class Config:
@@ -97,27 +80,32 @@ class ImageModel(BaseModel):
 @app.exception_handler(RequestValidationError)
 async def validation_exception_handler(request: Request, exc: RequestValidationError):
     error_out = convert_error(exc.errors())
-    return JSONResponse({"data": None, "status": "failed", "error": error_out}, status_code=status.HTTP_422_UNPROCESSABLE_ENTITY)
+    return JSONResponse({"data": None,
+                         "status": "failed",
+                         "error": error_out},
+                          status_code=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
 
 @app.post(path="/test",responses={200: {'model': ImageModel}})
-async def get_response(reference_id: str = Form(...,description="Reference id"),
-                       company_name: str = Form(...,description="company name of the client "),
-                       resize_width: int = Form(...,description="image resize width "),
-                       resize_height: int = Form(...,description="image resizeheight "),
-                       image_format: str = Form(...,description="image file format "),
-                       quality_check: bool = Form(True,description="image quality check"),
-                       image_file: UploadFile = File(...,description="image file"),
-                       ):
+async def get_response(
+    reference_id: str = Form(...,description="Reference id"),
+    company_name: str = Form(...,description="Company name"),
+    resize_width: int = Form(...,description="Image resize width "),
+    resize_height: int = Form(...,description="Image resize height "),
+    image_format: str = Form(...,description="Image file format "),
+    quality_check: bool = Form(True,description="Image quality check"),
+    image_file: UploadFile = File(...,description="Image file")):
+
 
     process_start_time = time.time()
-    file_extension = os.path.splitext(image_file.filename)[-1]
+    image_path = save_file(image_file)
 
-    if file_extension in ['.jpg', '.jpeg', '.png']:
+    file_extension = image_file.filename.split('.')[-1]
 
-        image = read_imagefile(await image_file.read())
+    if file_extension in ['jpg', 'jpeg', 'png', 'tiff', 'tif', 'webp']:
 
-        image_file_size = len(image.fp.read())
+        image_file_size = os.path.getsize(image_path)
+        image = Image.open(image_path)
 
         try:
             input_data = ImageModel(
@@ -130,32 +118,41 @@ async def get_response(reference_id: str = Form(...,description="Reference id"),
             )
 
             if (image_file_size < chunk_size):
-                wpercent = (resize_width / float(image.size[0]))
-                hsize = int((float(image.size[1]) * float(wpercent)))
+                width_percent = (resize_width / float(image.size[0]))
+                image_height = int((float(image.size[1]) * float(width_percent)))
                 image = image.resize(
-                    (resize_width, hsize), Image.ANTIALIAS)
+                    (resize_width, image_height), Image.ANTIALIAS)
                 buf = io.BytesIO()
+
                 if file_extension in ['jpg', 'jpeg']:
                     image.save(buf, format='JPEG')
-                else:
+                elif file_extension in ['png']:
                     image.save(buf, format='PNG')
+                elif file_extension in ['tiff', 'tif']:
+                    image.save(buf, format='TIFF')
+                else:
+                    image.save(buf, format='WEBP')
+  
                 base64_string = base64.b64encode(buf.getvalue()).decode()
+
             else:
+                os.remove(image_path)
                 return JSONResponse(
                     {"data": None,
                      "error": {
-                         "type": "input_error",
-                         "field": "image_file",
-                         "message": "file size mast be less than 10MB"
-                     },
-                        "status": "falied"
-                     }, status_code=400)
+                               "type": "ValidationError",
+                               "field": "image_file",
+                               "message": "file size must be less than 10MB"
+                              },
+                     "status": "failed"
+                    }, status_code=400)
+
             data = {
-                "basestring": base64_string,
+                "base_string": base64_string,
                 "reference_id": reference_id,
                 "time_stamp": time_stamp,
-                "processtime": (time.time() - process_start_time)
-            }
+                "process_time": (time.time() - process_start_time)
+                  }
             status = "success"
             status_code = 200
             error = None
@@ -167,14 +164,32 @@ async def get_response(reference_id: str = Form(...,description="Reference id"),
             status = "failed"
 
     else:
+        os.remove(image_path)
         return JSONResponse(
             {"data": None,
              "error": {
-                 "type": "input_error",
+                 "type": "ValidationError",
                  "field": "image_file",
-                 "message": "file formate not support"
+                 "message": f"{file_extension} file not support"
              },
                 "status": "falied"
              }, status_code=400)
 
+    os.remove(image_path)
     return JSONResponse({"data": data, "error": error, "status": status}, status_code=status_code)
+
+
+
+def save_file(file):
+    file_path = f"{file.filename}"
+    with open(file_path, "wb+") as file_object:
+        file_object.write(file.file.read())
+    return file_path
+
+def convert_error(exc):
+    error_fields = []
+    for data in exc:
+        temp_field = data['loc'][1] if len(data['loc']) > 1 else data['loc'][0]
+        temp_mes = data['msg']
+        error_fields.append({temp_field: {'meesage': temp_mes}})
+    return {"type": "ValidationError", "fields": error_fields}
