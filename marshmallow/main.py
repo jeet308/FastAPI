@@ -125,9 +125,9 @@ def save_file(file):
     return file_path
 
 def convert_error_string(error):
-    new_error = {}
+    new_error = []
     for key in error:
-        new_error.update({key: {"message": error[key]}})
+        new_error.append({key: error[key]})
     return new_error
 
 def convert_error(exc):
