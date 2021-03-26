@@ -21,6 +21,6 @@ def convert_error(exc):
     return {"type": "ValidationError", "fields": error_fields}
 
 def pixel_size(file):
-    img = Image.open(file)
-    width, height = img.size
+    imgage = Image.open(file)
+    width, height = imgage.size
     return width, height 
