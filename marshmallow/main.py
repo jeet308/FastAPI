@@ -11,12 +11,13 @@ import os
 import io
 from datetime import datetime
 import filetype
+import asyncio
+from schema import ImageSchema
 
 app = FastAPI()
 {}
 
 time_stamp = datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
-chunk_size = (10*1024*1024)
 
 @app.exception_handler(RequestValidationError)
 async def validation_exception_handler(request: Request, exc: RequestValidationError):
@@ -27,7 +28,21 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
          "status": "failed"},
           status_code=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
-@app.post("/testapi/",responses={200:{'model': sch.Example_200},422: {'model': sch.Example_422},400:{'model': sch.Example_400}})
+@app.middleware("http")
+async def timeout_middleware(request: Request, call_next):
+    try:
+        start_time = time.time()
+        return await asyncio.wait_for(call_next(request), timeout=1)
+    except asyncio.TimeoutError as e:
+        process_time = time.time() - start_time
+        return JSONResponse(
+                {"data": None,
+                 "error": {"type": "TimeoutError", "fields": None},
+                 "status": "failed"},
+                            status_code=status.HTTP_504_GATEWAY_TIMEOUT)
+
+
+@app.post("/testapi/",status_code=200)
 async def post_data(
     reference_id: str = Form(...,description="Reference id"),
     company_name: str = Form(...,description="Company name"),
@@ -53,7 +68,7 @@ async def post_data(
             "image_format": image_format,
             "image_file":image_file
             })
-
+        
         image = Image.open(image_path)
 
         if resize_width != None:
@@ -97,6 +112,6 @@ async def post_data(
     
             
     os.remove(image_path)
-    return JSONResponse({"data": data, "error": error, "status": status}, status_code=status_code)
-
+    res = JSONResponse({"data": data, "error": error, "status": status}, status_code=status_code)
+    return res
 
