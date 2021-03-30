@@ -1,4 +1,3 @@
-from PIL import Image
 
 def save_file(file):
     file_path = f"{file.filename}"
@@ -9,7 +8,8 @@ def save_file(file):
 def convert_error_string(error):
     new_error = []
     for key in error:
-        new_error.append({key: error[key]})
+        message = ''.join(error[key])
+        new_error.append({key: {"message":message}})
     return new_error
 
 def convert_error(exc):
@@ -20,7 +20,3 @@ def convert_error(exc):
         error_fields.append({temp_field: {'meesage': temp_mes}})
     return {"type": "ValidationError", "fields": error_fields}
 
-def pixel_size(file):
-    image = Image.open(file)
-    width, height = image.size
-    return width, height 
