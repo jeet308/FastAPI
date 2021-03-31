@@ -45,14 +45,13 @@ class ImageSchema(Schema):
     def check_height_width(cls, data, **kwargs):
         if data['resize_width'] is not None and data['resize_height'] is None:
             if (data['resize_width'] < 1 or data['resize_width'] >= 1920):
-                raise ValidationError('resize width must be 1 to 1920')
+                raise ValidationError('resize width must be 1 to 1920','resize_width')
         elif data['resize_height'] is not None and data['resize_width'] is None:
             if (data['resize_height'] < 1 or data['resize_height'] >= 1920):
-                raise ValidationError('resize height must be 1 to 1920')
+                raise ValidationError('resize height must be 1 to 1920','resize_height')
         else:
             raise ValidationError(
-                'Please use any one of resize_height or resize_width')
-
+                'Please use any one of resize_height or resize_width','common')
         return data
 
     @validates_schema
@@ -64,19 +63,19 @@ class ImageSchema(Schema):
         if file_extension != None:
             extension = file_extension.extension
             if extension not in ['jpg', 'jpeg', 'png', 'tiff', 'tif', 'webp']:
-                raise ValidationError('file is not supported')
+                raise ValidationError('file is not supported',"image_file")
         else:
-            raise ValidationError('file is not supported')
+            raise ValidationError('file is not supported',"image_file")
 
         if chunk_size < image_file_size:
-            raise ValidationError(f"file size must be less than 10MB")
+            raise ValidationError(f"file size must be less than 10MB","image_file")
 
         image = Image.open(image_path)
         width, height = image.size
         if width > 2000:
-            raise ValidationError(f"image width must be less than 2000 pixel")
+            raise ValidationError(f"image width must be less than 2000 pixel","image_file")
         if height > 2000:
-            raise ValidationError(f"image height must be less than 2000 pixel")
+            raise ValidationError(f"image height must be less than 2000 pixel","image_file")
 
         np_img = np.array(image)
         data["image_file"] = np_img
