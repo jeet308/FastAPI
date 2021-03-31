@@ -1,22 +1,22 @@
-from marshmallow import Schema, fields, validate, ValidationError, validates, validates_schema
+from marshmallow import Schema, fields, validate, ValidationError, validates, validates_schema, pre_load, post_load
 from pydantic import BaseModel
 import support as sup
 import os
 import filetype
 from PIL import Image
+import numpy as np
 
 chunk_size = (10*1024*1024)
 
-class ImageSchema(Schema):
 
+class ImageSchema(Schema):
     reference_id = fields.Str()
     resize_width = fields.Int(missing=None)
     resize_height = fields.Int(missing=None)
     company_name = fields.Str()
     image_format = fields.Str()
     quality_check = fields.Bool()
-    image_file = fields.Field()
-
+    image_file = fields.Str()
 
     @validates('reference_id')
     def reference_id_validate(cls, v):
@@ -30,8 +30,9 @@ class ImageSchema(Schema):
     def company_name_validate(cls, v):
         if not v.isalpha():
             raise ValidationError("company name must be alphabetic only")
-        if len(v)<0 and len(v)<30 :
-            raise ValidationError("company name length must be 1 to 30 characters")
+        if len(v) < 0 and len(v) < 30:
+            raise ValidationError(
+                "company name length must be 1 to 30 characters")
         return v
 
     @validates('image_format')
@@ -46,36 +47,57 @@ class ImageSchema(Schema):
             if (data['resize_width'] < 1 or data['resize_width'] >= 1920):
                 raise ValidationError('resize width must be 1 to 1920')
         elif data['resize_height'] is not None and data['resize_width'] is None:
-            if (data['resize_height'] < 1 or data['resize_height'] >= 1920) :
+            if (data['resize_height'] < 1 or data['resize_height'] >= 1920):
                 raise ValidationError('resize height must be 1 to 1920')
         else:
-            raise ValidationError('Please use any one of resize_height or resize_width')
-        return 200
+            raise ValidationError(
+                'Please use any one of resize_height or resize_width')
 
-    @validates('image_file')
-    def image_file_validate(cls, v):
+        return data
 
-        image_path=v.filename
+    @validates_schema
+    def image_file_validate(cls, data, **kwargs):
+        image_path = data["image_file"]
         file_extension = filetype.guess(image_path)
         image_file_size = os.path.getsize(image_path)
-        
+
         if file_extension != None:
             extension = file_extension.extension
             if extension not in ['jpg', 'jpeg', 'png', 'tiff', 'tif', 'webp']:
-                raise ValidationError('file is not supported') 
+                raise ValidationError('file is not supported')
         else:
-            raise ValidationError('file is not supported') 
+            raise ValidationError('file is not supported')
 
         if chunk_size < image_file_size:
             raise ValidationError(f"file size must be less than 10MB")
-        
+
         image = Image.open(image_path)
         width, height = image.size
         if width > 2000:
             raise ValidationError(f"image width must be less than 2000 pixel")
         if height > 2000:
-            raise ValidationError(f"image height must be less than 2000 pixel")       
-        return image
+            raise ValidationError(f"image height must be less than 2000 pixel")
+
+        np_img = np.array(image)
+        data["image_file"] = np_img
+        return data
+
+
+class Example_200(BaseModel):
+
+    class Config:
+        schema_extra = {
+            "example": {
+                "data": {
+                    "base64_string": "UklGRrQBAABXRUJQVlA4WAoAAAAQAAAAMQAAGwAAQUxQSCIAAAABF7D9EREBo7aRJM21i3AMcoN2nxH9jwuA+VVVVe9PvACYVlA4IGwBAAAQBwCdASoyABwAPm02l0gkIyIhJApIgA2JZz5owtVXjtBBBHiINLjBN5jWSk49bfuJCqbYWZ7XW1WgnN6Clg6KAAD+2+qf9rnRIkhj5SmyCEU/2vDv4WLuPCtPZ0z85RPS9UT/DdgDiJb6ct90KwpiwVQimg8xQS/VYxIvE9M8po5eIS3LUblYCy8DzHHoQfeplwBKR5JWqHnspQID7fH2iHg8S3aXsGev4FcljKc9mrRQfMAszhNlGzyPnHoMAxDvX8ch1K+4YcuHbl+ST6UyvgPQBvc+Xrptb7SSE3y4zr7bfk38PYavkTlPun5O4+HfJ5KPZ+Eo9Hevw7jNfWN7F7C9C6FRCPRynuyu76+TGhZBN/7Te4OYrgYAaGqqr4s0jDFxgY9RRSZKF47gokXqE8dQsPaAAMgMfW0FPf/pIp9gv1k9fhLEXk3p4lpLZnsESgWs703hpIm9x99VsTEkMFwZOunZvlN+QAAA",
+                    "reference_id": "abcd12",
+                    "time_stamp": "2021-03-31T14:26:13",
+                    "process_time": 0.08904647827148438
+                },
+                "error": "null",
+                "status": "success",
+            }
+        }
 
 
 class Example_422(BaseModel):
@@ -83,17 +105,17 @@ class Example_422(BaseModel):
     class Config:
         schema_extra = {
             "example": {
-                "reference_id":  "abcd12",
-                "resize_width":  500,
-                "resize_height": 200,
-                "company_name":  "frslabs",
-                "image_format":  "png",
-                "quality_check":  False,
+                "data": "null",
+                "error": {
+                    "type": "ValidationError",
+                    "fields": [
+                        {
+                            "reference_id": {
+                                "message": "reference id length must be 6"
+                            }
+                        }
+                    ]
+                },
+                "status": "falied",
             }
         }
-
-    
-
-    
-
-        
