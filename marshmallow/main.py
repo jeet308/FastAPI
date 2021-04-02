@@ -13,11 +13,14 @@ from datetime import datetime
 import filetype
 import asyncio
 import numpy as np
+import logger as log
 
 app = FastAPI()
 {}
 
 time_stamp = datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
+
+logger = log.logger()
 
 @app.exception_handler(RequestValidationError)
 async def validation_exception_handler(request: Request, exc: RequestValidationError):
@@ -55,6 +58,15 @@ async def post_data(
         image_format: str = Form(..., description="Image file format "),
         quality_check: bool = Form(True, description="Image quality check"),
         image_file: UploadFile = File(..., description="Image file")):
+    
+    logger.debug('---------------start---------------')
+    logger.debug({"reference_id":reference_id,
+                 "company_name":company_name,
+                 "resize_width":resize_width,
+                 "resize_height":resize_height,
+                 "image_format":image_format,
+                 "quality_check":quality_check
+                 })
 
     process_start_time = time.time()
     image_path = supp.save_file(image_file)
@@ -117,5 +129,6 @@ async def post_data(
         status_code = 400
 
     os.remove(image_path)
+    logger.debug('---------------end---------------')
     return JSONResponse({"data": data, "error": error,
                         "status": status}, status_code=status_code)
