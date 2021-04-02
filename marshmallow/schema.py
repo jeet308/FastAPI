@@ -8,7 +8,6 @@ import numpy as np
 
 chunk_size = (10*1024*1024)
 
-
 class ImageSchema(Schema):
     reference_id = fields.Str()
     resize_width = fields.Int(missing=None)
@@ -66,7 +65,6 @@ class ImageSchema(Schema):
                 raise ValidationError('file is not supported',"image_file")
         else:
             raise ValidationError('file is not supported',"image_file")
-
         if chunk_size < image_file_size:
             raise ValidationError(f"file size must be less than 10MB","image_file")
 
@@ -79,6 +77,7 @@ class ImageSchema(Schema):
 
         np_img = np.array(image)
         data["image_file"] = np_img
+
         return data
 
 
