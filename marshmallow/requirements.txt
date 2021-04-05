@@ -1,0 +1,9 @@
+daphne==3.0.1
+fastapi==0.63.0
+filetype==1.0.7
+marshmallow==3.10.0
+numpy==1.20.1
+Pillow==8.1.1
+pydantic==1.8.1
+python-multipart==0.0.5
+uvicorn==0.13.4
