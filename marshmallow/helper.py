@@ -10,7 +10,8 @@ class GetLogger():
     request_id = uuid.uuid4()
     system_name = socket.gethostname()
     project_name = "FastAPI"
-    form = (f"%(asctime)s.%(msecs)03d — %(levelname)-8s — {system_name} — {project_name} — %(endpoint)s — {request_id} — %(filename)s:%(lineno)-3d — %(message)s")
+    end_point = "[testapi]"
+    form = (f"%(asctime)s.%(msecs)03d — %(levelname)-8s — {system_name} — {project_name} — {end_point} — {request_id} — %(filename)s:%(lineno)-3d — %(message)s")
     
     def get_logger(self):
         logger = logging.getLogger("frs_labs")
