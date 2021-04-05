@@ -5,8 +5,12 @@ import os
 import filetype
 from PIL import Image
 import numpy as np
+from helper import GetLogger
 
 chunk_size = (10*1024*1024)
+
+logg = GetLogger()
+log = logg.get_logger()
 
 class ImageSchema(Schema):
     reference_id = fields.Str()
@@ -58,6 +62,7 @@ class ImageSchema(Schema):
         image_path = data["image_file"]
         file_extension = filetype.guess(image_path)
         image_file_size = os.path.getsize(image_path)
+        image_type = file_extension.mime
 
         if file_extension != None:
             extension = file_extension.extension
@@ -77,6 +82,8 @@ class ImageSchema(Schema):
 
         np_img = np.array(image)
         data["image_file"] = np_img
+
+        log.debug(image_type)
 
         return data
 
