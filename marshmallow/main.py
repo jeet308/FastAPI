@@ -46,17 +46,21 @@ async def timeout_middleware(request: Request, call_next):
 
 
 @app.post("/testapi/", responses={200: {"model": sch.Example_200},
-                                  422: {"model": sch.Example_422}})
+                                  422: {"model": sch.Example_422},
+                                  400: {"model": sch.Example_422},
+                                  504: {"model": sch.Example_504}})
+
 async def post_data(
-        reference_id: str = Form(..., description="Reference id"),
-        company_name: str = Form(..., description="Company name"),
+        reference_id: str = Form(..., description="referece_id: 6 character alphanumeric value"),
+        company_name: str = Form(..., description="Company name: Alphabetic value"),
         resize_width: Optional[int] = Form(
-            None, description="Image resize width "),
+            None, description="resize_width : image resize width"),
         resize_height: Optional[int] = Form(
-            None, description="Image resize height "),
-        image_format: str = Form(..., description="Image file format "),
+            None, description="resize_height : image resize height"),
+        image_format: str = Form(..., description="Image_format : PNG, JPEG, JPG, TIFF, WEP"),
         quality_check: bool = Form(True, description="Image quality check"),
         image_file: UploadFile = File(..., description="Image file")):
+    
     
     log.debug('--------------start--------------')
     log.debug({"reference_id":reference_id,
@@ -126,6 +130,7 @@ async def post_data(
         data = None
         status = "falied"
         status_code = 400
+
 
     os.remove(image_path)
     log.debug('---------------end---------------')
