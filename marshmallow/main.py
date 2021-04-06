@@ -47,7 +47,7 @@ async def timeout_middleware(request: Request, call_next):
 
 @app.post("/testapi/", responses={200: {"model": sch.Example_200},
                                   422: {"model": sch.Example_422},
-                                  400: {"model": sch.Example_422},
+                                  400: {"model": sch.Example_400},
                                   504: {"model": sch.Example_504}})
 
 async def post_data(
