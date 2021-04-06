@@ -1,11 +1,9 @@
 FROM python:3.8.8
 
-RUN mkdir frslabs
 RUN pip3 install --upgrade pip
-RUN python3 -m venv env
 
-COPY ./app ./
-COPY ./requirements.txt ./
+COPY . ./marshmallow
+WORKDIR ./marshmallow
 
 RUN pip install -r requirements.txt
 
