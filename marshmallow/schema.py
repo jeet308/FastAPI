@@ -111,7 +111,7 @@ class Example_200(BaseModel):
         }
 
 
-class Example_422(BaseModel):
+class Example_400(BaseModel):
 
     class Config:
         schema_extra = {
@@ -128,6 +128,27 @@ class Example_422(BaseModel):
                     ]
                 },
                 "status": "falied"
+            }
+        }
+
+
+class Example_422(BaseModel):
+
+    class Config:
+        schema_extra = {
+            "example": {
+                "data": "null",
+                "error": {
+                    "type": "ValidationError",
+                    "fields": [
+                        {
+                            "quality_check": {
+                                "meesage": "value could not be parsed to a boolean"
+                            }
+                        }
+                    ]
+                },
+                "status": "failed"
             }
         }
 
