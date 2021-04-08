@@ -2,28 +2,24 @@ from fastapi import FastAPI, UploadFile, Form, File, Request, status
 from typing import Optional
 from fastapi.responses import JSONResponse
 from fastapi.exceptions import RequestValidationError
-import schema as sch
-import support as supp
+import schema_mar as sch
+# import schema_py as sch
+import support as sup
 from PIL import Image
 import base64
 import time
-import os
 import io
 from datetime import datetime
-import filetype
 import asyncio
-import numpy as np
+import os
 
 app = FastAPI()
-{}
-
-time_stamp = datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
 
 log = sch.log
 
 @app.exception_handler(RequestValidationError)
 async def validation_exception_handler(request: Request, exc: RequestValidationError):
-    error_out = supp.convert_error(exc.errors())
+    error_out = sup.convert_error_pydentic(exc.errors())
     return JSONResponse(
         {"data": None,
          "error": error_out,
@@ -40,28 +36,25 @@ async def timeout_middleware(request: Request, call_next):
         process_time = time.time() - start_time
         return JSONResponse(
             {"data": None,
-             "error": {"type": "TimeoutError", "fields": None},
+             "error": {"type": "TimeoutError", "message": "API timed out.", "fields": None},
              "status": "failed"},
             status_code=status.HTTP_504_GATEWAY_TIMEOUT)
 
 
-@app.post("/testapi/", responses={200: {"model": sch.Example_200},
-                                  422: {"model": sch.Example_422},
-                                  400: {"model": sch.Example_400},
-                                  504: {"model": sch.Example_504}})
+@app.post("/test", responses={200: {"model": sup.Example_200},
+                              422: {"model": sup.Example_422},
+                              504: {"model": sup.Example_504}})
 
-async def post_data(
-        reference_id: str = Form(..., description="referece_id: 6 character alphanumeric value"),
-        company_name: str = Form(..., description="Company name: Alphabetic value"),
-        resize_width: Optional[int] = Form(
-            None, description="resize_width : image resize width"),
-        resize_height: Optional[int] = Form(
-            None, description="resize_height : image resize height"),
-        image_format: str = Form(..., description="Image_format : PNG, JPEG, JPG, TIFF, WEP"),
-        quality_check: bool = Form(True, description="Image quality check"),
-        image_file: UploadFile = File(..., description="Image file")):
-    
-    
+async def post_data(request: Request,
+        reference_id: str = Form(..., description="=6 character alphanumeric value"),
+        company_name: str = Form(..., description="<30 character alphabetic value"),
+        resize_width: Optional[int] = Form(None, description="image resize width"),
+        resize_height: Optional[int] = Form(None, description="image resize height"),
+        image_format: Optional[str] = Form(..., description="any of [jpg, jpeg, png, tiff, tif, webp]"),
+        quality_check: bool = Form(True, description="image quality check"),
+        image_file: UploadFile = File(..., description="image file")):
+
+
     log.debug('--------------start--------------')
     log.debug({"reference_id":reference_id,
                  "company_name":company_name,
@@ -72,51 +65,52 @@ async def post_data(
                  })
 
     process_start_time = time.time()
-    image_path = supp.save_file(image_file)
-
-    file_extension = filetype.guess(image_path)
 
     try:
-        input_data = sch.ImageSchema().load(
+        #remove this to use marshmallow validation
+        input_data_dict = sch.ImageSchema().load(
             {"reference_id": reference_id,
              "resize_width": resize_width,
              "resize_height": resize_height,
              "company_name": company_name,
              "quality_check": quality_check,
              "image_format": image_format,
-             "image_file": image_path
+             "image_file": image_file
              })
 
-        image = Image.fromarray(input_data["image_file"])
+        input_data = sup.dict2obj(input_data_dict)
+
+        # remove comment to use pydnatic validation
+        # input_data = sch.ImageSchema(
+        #      reference_id=reference_id,
+        #      resize_width=resize_width,
+        #      resize_height=resize_height,
+        #      company_name=company_name,
+        #      quality_check=quality_check,
+        #      image_format=image_format,
+        #      image_file=image_file
+        #      )
+
+        image = Image.fromarray(input_data.image_file)
 
         if resize_width != None:
-            width_percent = (input_data['resize_width'] / float(image.size[0]))
+            width_percent = (input_data.resize_width / float(image.size[0]))
             image_height = int((float(image.size[1]) * float(width_percent)))
-            image = image.resize(
-                (input_data['resize_width'], image_height), Image.ANTIALIAS)
+            image = image.resize((input_data.resize_width, image_height), Image.ANTIALIAS)
         else:
-            height_percent = (
-                input_data['resize_height'] / float(image.size[1]))
+            height_percent = (input_data.resize_height / float(image.size[1]))
             image_width = int((float(image.size[0]) * float(height_percent)))
-            image = image.resize(
-                (input_data['resize_height'], image_width), Image.ANTIALIAS)
+            image = image.resize((input_data.resize_height, image_width), Image.ANTIALIAS)
 
         buf = io.BytesIO()
 
-        if file_extension in ['jpg', 'jpeg']:
-            image.save(buf, format='JPEG')
-        elif file_extension in ['png']:
-            image.save(buf, format='PNG')
-        elif file_extension in ['tiff', 'tif']:
-            image.save(buf, format='TIFF')
-        else:
-            image.save(buf, format='WEBP')
-
+        image.save(buf, format='JPEG')
         base64_string = base64.b64encode(buf.getvalue()).decode()
+        time_stamp = datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
 
         data = {
             "base64_string": base64_string,
-            "reference_id": input_data['reference_id'],
+            "reference_id": input_data.reference_id,
             "time_stamp": time_stamp,
             "process_time": (time.time() - process_start_time),
         }
@@ -124,15 +118,15 @@ async def post_data(
         error = None
         status_code = 200
     except sch.ValidationError as e:
-        error_type = e.__class__.__name__
-        error_messages = supp.convert_error_string(e.__dict__['messages'])
-        error = {"type": error_type, "fields": error_messages}
+        # error = sup.convert_error_pydentic(e.errors()) # use with pydantic validation
+        error = sup.convert_error_marshmallow(e.__dict__['messages']) # use with marshmallow validation
         data = None
-        status = "falied"
-        status_code = 400
+        status = "failed"
+        status_code = 422
 
 
-    os.remove(image_path)
+    data_remove = (f"data/{image_file.filename}")
+    os.remove(data_remove)
     log.debug('---------------end---------------')
     return JSONResponse({"data": data, "error": error,
                         "status": status}, status_code=status_code)
