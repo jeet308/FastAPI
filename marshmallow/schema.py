@@ -5,10 +5,10 @@ import filetype
 from PIL import Image
 import numpy as np
 import main
-from loguru_log import GetLogger
+import loguru_log
 
 chunk_size = (5*1024*1024)
-logger = GetLogger.logg()
+logger = loguru_log.logg()
 
 class ImageSchema(Schema):
     reference_id = fields.Str()
@@ -83,7 +83,7 @@ class ImageSchema(Schema):
         np_img = np.array(rgb_image)
         data["image_file"] = np_img
         data["image_type"] = file_extension
-        
+
         logger.debug(f"file extension: {file_extension}")
 
         return data
