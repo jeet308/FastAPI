@@ -13,14 +13,14 @@ from datetime import datetime
 import asyncio
 import os
 from starlette.routing import Match
-from loguru_log import GetLogger
+import loguru_log
 import uuid
 import uvicorn
 
 app = FastAPI()
 
 
-logger = GetLogger.logg()
+logger = loguru_log.logg()
 
 
 @app.middleware("http")
