@@ -12,10 +12,36 @@ import io
 from datetime import datetime
 import asyncio
 import os
+from starlette.routing import Match
+from loguru_log import GetLogger
+import uuid
+import uvicorn
 
 app = FastAPI()
 
-log = sch.log
+
+logger = GetLogger.logg()
+
+
+@app.middleware("http")
+async def request_middleware(request, call_next):
+    end_point = request.url.path
+    request_id = str(uuid.uuid4())
+    with logger.contextualize(request_id=request_id,end_point=end_point):
+        logger.debug('--------------start--------------') 
+
+        try:
+            response = await call_next(request)
+
+        except Exception as ex:
+            logger.error(f"Request failed: {ex}")
+            response = JSONResponse(content={"success": False}, status_code=500)
+
+        finally:
+            response.headers["X-Request-ID"] = request_id
+            logger.debug('---------------end---------------')
+            return response
+
 
 @app.exception_handler(RequestValidationError)
 async def validation_exception_handler(request: Request, exc: RequestValidationError):
@@ -25,7 +51,6 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
          "error": error_out,
          "status": "failed"},
         status_code=status.HTTP_422_UNPROCESSABLE_ENTITY)
-
 
 @app.middleware("http")
 async def timeout_middleware(request: Request, call_next):
@@ -54,9 +79,7 @@ async def post_data(request: Request,
         quality_check: bool = Form(True, description="image quality check"),
         image_file: UploadFile = File(..., description="image file")):
 
-
-    log.debug('--------------start--------------')
-    log.debug({"reference_id":reference_id,
+    logger.debug({"reference_id":reference_id,
                  "company_name":company_name,
                  "resize_width":resize_width,
                  "resize_height":resize_height,
@@ -77,7 +100,7 @@ async def post_data(request: Request,
              "image_format": image_format,
              "image_file": image_file
              })
-
+        
         input_data = sup.dict2obj(input_data_dict)
 
         # remove comment to use pydnatic validation
@@ -127,8 +150,9 @@ async def post_data(request: Request,
 
     data_remove = (f"data/{image_file.filename}")
     os.remove(data_remove)
-    log.debug('---------------end---------------')
     return JSONResponse({"data": data, "error": error,
                         "status": status}, status_code=status_code)
 
 
+if __name__ == "__main__":
+    uvicorn.run("app:app", host="localhost", port=8001)
