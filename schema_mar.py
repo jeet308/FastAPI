@@ -1,14 +1,12 @@
 from marshmallow import Schema, fields, validate, ValidationError, validates, validates_schema
-import support as sup
+import utils as sup
 import os
 import filetype
 from PIL import Image
 import numpy as np
-import main
-import loguru_log
+from loguru import logger
 
-chunk_size = (5*1024*1024)
-logger = loguru_log.logg()
+chunk_size = (10*1024*1024)
 
 class ImageSchema(Schema):
     reference_id = fields.Str()
@@ -87,4 +85,3 @@ class ImageSchema(Schema):
         logger.debug(f"file extension: {file_extension}")
 
         return data
-

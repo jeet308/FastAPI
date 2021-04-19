@@ -1,17 +1,15 @@
 from pydantic import BaseModel, ValidationError, validator, root_validator
 from fastapi import UploadFile
 from typing import Optional
-import support as sup
+import utils as sup
 import os
 import filetype
 from PIL import Image
 import numpy as np
-from helper import GetLogger
+from loguru import logger
+
 
 chunk_size = (5*1024*1024)
-
-logg = GetLogger()
-log = logg.get_logger()
 
 class ImageSchema(BaseModel):
     reference_id : str
@@ -20,7 +18,8 @@ class ImageSchema(BaseModel):
     company_name : str
     image_format : str
     quality_check : bool
-    image_file : UploadFile = None
+    # image_file : UploadFile = None
+    image_file : str
 
     @validator('reference_id')
     def reference_id_validate(cls, v):
@@ -55,11 +54,11 @@ class ImageSchema(BaseModel):
         return values
 
     @validator('image_file')
-    def image_file_validate(cls, v):
-        try:
-            image_path = sup.save_file(v)
-        except:
-            raise ValueError("field required")
+    def image_file_validate(cls, image_path):
+        # try:
+        #     image_path = sup.save_file(v)
+        # except:
+        #     raise ValueError("field required")
 
         file_type = filetype.guess(image_path)
         image_file_size = os.path.getsize(image_path)
@@ -82,7 +81,8 @@ class ImageSchema(BaseModel):
 
         np_img = np.array(image)
 
-        log.debug(file_extension)
+        logger.debug(f"file extension: {file_extension}")
 
+        os.remove(image_path)
         return np_img
 
