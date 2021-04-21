@@ -6,7 +6,7 @@ from PIL import Image
 import numpy as np
 from loguru import logger
 
-chunk_size = (10*1024*1024)
+chunk_size = (5*1024*1024)
 
 class ImageSchema(Schema):
     reference_id = fields.Str()

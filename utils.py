@@ -1,5 +1,7 @@
 from pydantic import BaseModel
 import os
+import aiofiles
+import uuid
 
 project_root_path = os.path.dirname(os.path.abspath(__file__))
 data_path = os.path.join(project_root_path, 'data')
@@ -8,10 +10,20 @@ if not os.path.isdir(data_path):
     os.mkdir(data_path)
 
 def save_file(file):
-    file_path = os.path.join(data_path, file.filename)
+    filename = str(uuid.uuid4())
+    file_path = os.path.join(data_path, filename)
 
     with open(file_path, "wb+") as file_object:
         file_object.write(file.file.read())
+    return file_path
+
+async def save_file_aiof(file):
+    filename = str(uuid.uuid4())
+    file_path = os.path.join(data_path, filename)
+
+    async with aiofiles.open(file_path, "wb") as out:
+        contents = await file.read()
+        await out.write(contents)
     return file_path
 
 def convert_error_marshmallow(error):
@@ -21,7 +33,7 @@ def convert_error_marshmallow(error):
         error_fields.append({key: {"message":message}})
     return {"type": "ValidationError", "message":None, "fields": error_fields}
 
-def convert_error_pydentic(exc):
+def convert_error_pydantic(exc):
     error_fields = []
     for data in exc:
         temp_field = data['loc'][1] if len(data['loc']) > 1 else data['loc'][0]

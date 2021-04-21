@@ -2,24 +2,26 @@ from locust import HttpUser, task, between
 import os
 import random
 
-file_path = 'test2.jpg'
+file_path = '/home/****/****/img/test.png'
 
+payload={'reference_id': '456ad8',
+'resize_width': '50',
+'company_name': 'frslabs',
+'quality_check': 'true',
+'image_format': 'jpg'}
 
 class QuickstartUser(HttpUser):
-    wait_time = between(3, 10)
+    wait_time = between(5, 50)
 
     @task
-    def test_api(self):
-        files = {'image_file':  open(file_path, 'rb')}
-        data = {"reference_id": "bbbb22",
-                "company_name": "frslabs",
-                "resize_width": 75,
-                "resize_height": None,
-                "image_format": "png",
-                "quality_check": True}
-        #result = self.client.post("/test/normal",files=files,data=data)
-        #result = self.client.post("/test/shutil",files=files,data=data)
-        result = self.client.post("/test/aiof",files=files,data=data)
+    def shutil_save(self):
+        files = {'image_file': ( 'image_file', open(file_path, 'rb'), 'image/jpeg')}
+        result = self.client.post("/test", data=payload, files=files)
 
-        print(result.text)
+        http_code = result.status_code
+        #print(f"status: {http_code}")
+        #print(result.text)
         print(f"status: {result.status_code}")
+        if http_code > 300:
+            print(f"status: {http_code}")
+            print(result.text)

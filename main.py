@@ -25,7 +25,7 @@ async def request_middleware(request, call_next):
     end_point = request.url.path
     request_id = str(uuid.uuid4())
     with logger.contextualize(request_id=request_id,end_point=end_point):
-        logger.debug('--------------start--------------')
+        logger.debug('--------------start--------------') 
 
         try:
             return await call_next(request)
@@ -57,13 +57,13 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
     return JSONResponse(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
                         content={"error": error_out,"status": "failed"})
 
-# @app.middleware("http")
-# async def timeout_middleware(request: Request, call_next):
-#     try:
-#         return await asyncio.wait_for(call_next(request), timeout=1000)
-#     except asyncio.TimeoutError:
-#         return JSONResponse(status_code=status.HTTP_504_GATEWAY_TIMEOUT,
-#             content = {"error": {"type": "TimeoutError", "message": "API timed out.", "fields": None},"status": "failed"})
+@app.middleware("http")
+async def timeout_middleware(request: Request, call_next):
+    try:
+        return await asyncio.wait_for(call_next(request), timeout=1000)
+    except asyncio.TimeoutError:
+        return JSONResponse(status_code=status.HTTP_504_GATEWAY_TIMEOUT,
+            content = {"error": {"type": "TimeoutError", "message": "API timed out.", "fields": None},"status": "failed"})
 
 
 @app.post("/test", responses={200: {"model": utils.Example_200},
@@ -104,8 +104,8 @@ async def post_data(
         # input_data = utils.dict2obj(input_data_dict)
 
         # remove comment to use pydnatic validation
+
         image_path = await utils.save_file_aiof(image_file)
-        # image_path = utils.save_file(image_file)
 
         input_data = sch.ImageSchema(
             reference_id=reference_id,

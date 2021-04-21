@@ -74,10 +74,10 @@ class ImageSchema(BaseModel):
 
         image = Image.open(image_path)
         width, height = image.size
-        if width > 2000:
-            raise ValueError("image width must be less than 2000 pixel")
-        if height > 2000:
-            raise ValueError("image height must be less than 2000 pixel")
+        if width > 5000:
+            raise ValueError("image width must be less than 5000 pixel")
+        if height > 5000:
+            raise ValueError("image height must be less than 5000 pixel")
 
         np_img = np.array(image)
 
@@ -85,4 +85,3 @@ class ImageSchema(BaseModel):
 
         os.remove(image_path)
         return np_img
-
