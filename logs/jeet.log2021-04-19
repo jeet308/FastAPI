@@ -1,0 +1,512 @@
+2021-04-19 17:00:30.040 — DEBUG — jeet — FastAPI — [/test] — [481031a3-d999-49ee-ad36-4ddf9cbb413f] — main.py:28 — --------------start-------------- 
+2021-04-19 17:00:30.131 — DEBUG — jeet — FastAPI — [/test] — [481031a3-d999-49ee-ad36-4ddf9cbb413f] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:00:30.282 — DEBUG — jeet — FastAPI — [/test] — [481031a3-d999-49ee-ad36-4ddf9cbb413f] — schema_py.py:84 — file extension: png 
+2021-04-19 17:00:30.328 — DEBUG — jeet — FastAPI — [/test] — [481031a3-d999-49ee-ad36-4ddf9cbb413f] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:00:31.169 — DEBUG — jeet — FastAPI — [/test] — [a9b16e10-1693-4999-b19b-ad1f596f515b] — main.py:28 — --------------start-------------- 
+2021-04-19 17:00:31.206 — DEBUG — jeet — FastAPI — [/test] — [a9b16e10-1693-4999-b19b-ad1f596f515b] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:00:31.358 — DEBUG — jeet — FastAPI — [/test] — [a9b16e10-1693-4999-b19b-ad1f596f515b] — schema_py.py:84 — file extension: png 
+2021-04-19 17:00:31.399 — DEBUG — jeet — FastAPI — [/test] — [a9b16e10-1693-4999-b19b-ad1f596f515b] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:00:32.246 — DEBUG — jeet — FastAPI — [/test] — [82a8735d-e605-4de0-a93b-e03e826a256c] — main.py:28 — --------------start-------------- 
+2021-04-19 17:00:32.279 — DEBUG — jeet — FastAPI — [/test] — [82a8735d-e605-4de0-a93b-e03e826a256c] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:00:32.423 — DEBUG — jeet — FastAPI — [/test] — [82a8735d-e605-4de0-a93b-e03e826a256c] — schema_py.py:84 — file extension: png 
+2021-04-19 17:00:32.463 — DEBUG — jeet — FastAPI — [/test] — [82a8735d-e605-4de0-a93b-e03e826a256c] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:00:33.298 — DEBUG — jeet — FastAPI — [/test] — [12fe8f85-b115-4f62-90ac-250bccc98c1d] — main.py:28 — --------------start-------------- 
+2021-04-19 17:00:33.330 — DEBUG — jeet — FastAPI — [/test] — [12fe8f85-b115-4f62-90ac-250bccc98c1d] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:00:33.475 — DEBUG — jeet — FastAPI — [/test] — [12fe8f85-b115-4f62-90ac-250bccc98c1d] — schema_py.py:84 — file extension: png 
+2021-04-19 17:00:33.522 — DEBUG — jeet — FastAPI — [/test] — [12fe8f85-b115-4f62-90ac-250bccc98c1d] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:00:34.324 — DEBUG — jeet — FastAPI — [/test] — [bfd10335-c624-4667-90ef-2844595a8c3f] — main.py:28 — --------------start-------------- 
+2021-04-19 17:00:34.354 — DEBUG — jeet — FastAPI — [/test] — [bfd10335-c624-4667-90ef-2844595a8c3f] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:00:34.491 — DEBUG — jeet — FastAPI — [/test] — [bfd10335-c624-4667-90ef-2844595a8c3f] — schema_py.py:84 — file extension: png 
+2021-04-19 17:00:34.531 — DEBUG — jeet — FastAPI — [/test] — [bfd10335-c624-4667-90ef-2844595a8c3f] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:00:35.357 — DEBUG — jeet — FastAPI — [/test] — [6049b609-8429-4dff-868e-8fd02f56e33a] — main.py:28 — --------------start-------------- 
+2021-04-19 17:00:35.389 — DEBUG — jeet — FastAPI — [/test] — [6049b609-8429-4dff-868e-8fd02f56e33a] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:00:35.530 — DEBUG — jeet — FastAPI — [/test] — [6049b609-8429-4dff-868e-8fd02f56e33a] — schema_py.py:84 — file extension: png 
+2021-04-19 17:00:35.570 — DEBUG — jeet — FastAPI — [/test] — [6049b609-8429-4dff-868e-8fd02f56e33a] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:00:36.380 — DEBUG — jeet — FastAPI — [/test] — [a09a75ad-3b0b-4820-8712-f9ea840c8654] — main.py:28 — --------------start-------------- 
+2021-04-19 17:00:36.380 — DEBUG — jeet — FastAPI — [/test] — [295a7407-d02f-497b-a950-52fbdb70a8e2] — main.py:28 — --------------start-------------- 
+2021-04-19 17:00:36.381 — DEBUG — jeet — FastAPI — [/test] — [757c7373-8ece-4990-9794-05af8f86f118] — main.py:28 — --------------start-------------- 
+2021-04-19 17:00:36.453 — DEBUG — jeet — FastAPI — [/test] — [a09a75ad-3b0b-4820-8712-f9ea840c8654] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:00:36.593 — DEBUG — jeet — FastAPI — [/test] — [a09a75ad-3b0b-4820-8712-f9ea840c8654] — schema_py.py:84 — file extension: png 
+2021-04-19 17:00:36.632 — DEBUG — jeet — FastAPI — [/test] — [a09a75ad-3b0b-4820-8712-f9ea840c8654] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:00:36.636 — DEBUG — jeet — FastAPI — [/test] — [757c7373-8ece-4990-9794-05af8f86f118] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:00:36.764 — DEBUG — jeet — FastAPI — [/test] — [757c7373-8ece-4990-9794-05af8f86f118] — schema_py.py:84 — file extension: png 
+2021-04-19 17:00:36.800 — DEBUG — jeet — FastAPI — [/test] — [757c7373-8ece-4990-9794-05af8f86f118] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:00:36.803 — DEBUG — jeet — FastAPI — [/test] — [295a7407-d02f-497b-a950-52fbdb70a8e2] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:00:36.937 — DEBUG — jeet — FastAPI — [/test] — [295a7407-d02f-497b-a950-52fbdb70a8e2] — schema_py.py:84 — file extension: png 
+2021-04-19 17:00:36.983 — DEBUG — jeet — FastAPI — [/test] — [295a7407-d02f-497b-a950-52fbdb70a8e2] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:00:37.788 — DEBUG — jeet — FastAPI — [/test] — [1ba4f648-2e43-4ace-900e-385d59dc01fa] — main.py:28 — --------------start-------------- 
+2021-04-19 17:00:37.789 — DEBUG — jeet — FastAPI — [/test] — [3b7d9737-16b8-4555-90e1-dfe6abea7ce8] — main.py:28 — --------------start-------------- 
+2021-04-19 17:00:37.846 — DEBUG — jeet — FastAPI — [/test] — [3b7d9737-16b8-4555-90e1-dfe6abea7ce8] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:00:37.846 — DEBUG — jeet — FastAPI — [/test] — [1ba4f648-2e43-4ace-900e-385d59dc01fa] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:00:37.984 — DEBUG — jeet — FastAPI — [/test] — [1ba4f648-2e43-4ace-900e-385d59dc01fa] — schema_py.py:84 — file extension: png 
+2021-04-19 17:00:38.025 — DEBUG — jeet — FastAPI — [/test] — [1ba4f648-2e43-4ace-900e-385d59dc01fa] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:00:38.149 — DEBUG — jeet — FastAPI — [/test] — [3b7d9737-16b8-4555-90e1-dfe6abea7ce8] — schema_py.py:84 — file extension: png 
+2021-04-19 17:00:38.185 — DEBUG — jeet — FastAPI — [/test] — [3b7d9737-16b8-4555-90e1-dfe6abea7ce8] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:00:39.025 — DEBUG — jeet — FastAPI — [/test] — [2f17bbc2-986d-47bd-b78e-d2f0adf5acfb] — main.py:28 — --------------start-------------- 
+2021-04-19 17:00:39.082 — DEBUG — jeet — FastAPI — [/test] — [2f17bbc2-986d-47bd-b78e-d2f0adf5acfb] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:00:39.235 — DEBUG — jeet — FastAPI — [/test] — [2f17bbc2-986d-47bd-b78e-d2f0adf5acfb] — schema_py.py:84 — file extension: png 
+2021-04-19 17:00:39.279 — DEBUG — jeet — FastAPI — [/test] — [2f17bbc2-986d-47bd-b78e-d2f0adf5acfb] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:04:39.852 — DEBUG — jeet — FastAPI — [/test] — [8f1f9514-8af7-4385-8c14-4a2ace7e110d] — main.py:28 — --------------start-------------- 
+2021-04-19 17:04:39.915 — DEBUG — jeet — FastAPI — [/test] — [8f1f9514-8af7-4385-8c14-4a2ace7e110d] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:04:40.060 — DEBUG — jeet — FastAPI — [/test] — [8f1f9514-8af7-4385-8c14-4a2ace7e110d] — schema_py.py:84 — file extension: png 
+2021-04-19 17:04:40.101 — DEBUG — jeet — FastAPI — [/test] — [8f1f9514-8af7-4385-8c14-4a2ace7e110d] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:04:40.918 — DEBUG — jeet — FastAPI — [/test] — [95cf2225-c0f4-4e31-bc1d-c6de649c5e95] — main.py:28 — --------------start-------------- 
+2021-04-19 17:04:40.949 — DEBUG — jeet — FastAPI — [/test] — [95cf2225-c0f4-4e31-bc1d-c6de649c5e95] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:04:41.088 — DEBUG — jeet — FastAPI — [/test] — [95cf2225-c0f4-4e31-bc1d-c6de649c5e95] — schema_py.py:84 — file extension: png 
+2021-04-19 17:04:41.129 — DEBUG — jeet — FastAPI — [/test] — [95cf2225-c0f4-4e31-bc1d-c6de649c5e95] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:04:41.946 — DEBUG — jeet — FastAPI — [/test] — [64b613b0-1f1b-490b-8792-3bd7c36c66a2] — main.py:28 — --------------start-------------- 
+2021-04-19 17:04:41.977 — DEBUG — jeet — FastAPI — [/test] — [64b613b0-1f1b-490b-8792-3bd7c36c66a2] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:04:42.118 — DEBUG — jeet — FastAPI — [/test] — [64b613b0-1f1b-490b-8792-3bd7c36c66a2] — schema_py.py:84 — file extension: png 
+2021-04-19 17:04:42.160 — DEBUG — jeet — FastAPI — [/test] — [64b613b0-1f1b-490b-8792-3bd7c36c66a2] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:04:42.979 — DEBUG — jeet — FastAPI — [/test] — [c504d239-936f-4499-a0b9-5b96d06a2dfd] — main.py:28 — --------------start-------------- 
+2021-04-19 17:04:43.010 — DEBUG — jeet — FastAPI — [/test] — [c504d239-936f-4499-a0b9-5b96d06a2dfd] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:04:43.147 — DEBUG — jeet — FastAPI — [/test] — [c504d239-936f-4499-a0b9-5b96d06a2dfd] — schema_py.py:84 — file extension: png 
+2021-04-19 17:04:43.187 — DEBUG — jeet — FastAPI — [/test] — [c504d239-936f-4499-a0b9-5b96d06a2dfd] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:04:44.137 — DEBUG — jeet — FastAPI — [/test] — [4039ce89-e88c-433f-8f73-0a4df02ed1f0] — main.py:28 — --------------start-------------- 
+2021-04-19 17:04:44.171 — DEBUG — jeet — FastAPI — [/test] — [4039ce89-e88c-433f-8f73-0a4df02ed1f0] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:04:44.330 — DEBUG — jeet — FastAPI — [/test] — [4039ce89-e88c-433f-8f73-0a4df02ed1f0] — schema_py.py:84 — file extension: png 
+2021-04-19 17:04:44.375 — DEBUG — jeet — FastAPI — [/test] — [4039ce89-e88c-433f-8f73-0a4df02ed1f0] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:04:45.114 — DEBUG — jeet — FastAPI — [/test] — [9a12dcab-aebe-4eba-af31-987dfe917b41] — main.py:28 — --------------start-------------- 
+2021-04-19 17:04:45.149 — DEBUG — jeet — FastAPI — [/test] — [9a12dcab-aebe-4eba-af31-987dfe917b41] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:04:45.318 — DEBUG — jeet — FastAPI — [/test] — [9a12dcab-aebe-4eba-af31-987dfe917b41] — schema_py.py:84 — file extension: png 
+2021-04-19 17:04:45.363 — DEBUG — jeet — FastAPI — [/test] — [9a12dcab-aebe-4eba-af31-987dfe917b41] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:04:46.234 — DEBUG — jeet — FastAPI — [/test] — [88c2dd14-9543-4e0b-b741-932b55401d1c] — main.py:28 — --------------start-------------- 
+2021-04-19 17:04:46.268 — DEBUG — jeet — FastAPI — [/test] — [88c2dd14-9543-4e0b-b741-932b55401d1c] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:04:46.409 — DEBUG — jeet — FastAPI — [/test] — [88c2dd14-9543-4e0b-b741-932b55401d1c] — schema_py.py:84 — file extension: png 
+2021-04-19 17:04:46.448 — DEBUG — jeet — FastAPI — [/test] — [88c2dd14-9543-4e0b-b741-932b55401d1c] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:04:47.273 — DEBUG — jeet — FastAPI — [/test] — [ef91c847-abf8-4587-86bd-44232e1649e3] — main.py:28 — --------------start-------------- 
+2021-04-19 17:04:47.274 — DEBUG — jeet — FastAPI — [/test] — [c500ddc7-5c00-419d-b5b2-28a69d4ddd53] — main.py:28 — --------------start-------------- 
+2021-04-19 17:04:47.333 — DEBUG — jeet — FastAPI — [/test] — [ef91c847-abf8-4587-86bd-44232e1649e3] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:04:47.334 — DEBUG — jeet — FastAPI — [/test] — [c500ddc7-5c00-419d-b5b2-28a69d4ddd53] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:04:47.485 — DEBUG — jeet — FastAPI — [/test] — [c500ddc7-5c00-419d-b5b2-28a69d4ddd53] — schema_py.py:84 — file extension: png 
+2021-04-19 17:04:47.526 — DEBUG — jeet — FastAPI — [/test] — [c500ddc7-5c00-419d-b5b2-28a69d4ddd53] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:04:47.664 — DEBUG — jeet — FastAPI — [/test] — [ef91c847-abf8-4587-86bd-44232e1649e3] — schema_py.py:84 — file extension: png 
+2021-04-19 17:04:47.701 — DEBUG — jeet — FastAPI — [/test] — [ef91c847-abf8-4587-86bd-44232e1649e3] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:04:48.507 — DEBUG — jeet — FastAPI — [/test] — [f0ec4ce1-2f00-4a64-8a94-63312f3a5790] — main.py:28 — --------------start-------------- 
+2021-04-19 17:04:48.508 — DEBUG — jeet — FastAPI — [/test] — [0d901752-452b-461f-82c5-244e346f4897] — main.py:28 — --------------start-------------- 
+2021-04-19 17:04:48.508 — DEBUG — jeet — FastAPI — [/test] — [8933af19-d151-4a34-be24-3c35819c1322] — main.py:28 — --------------start-------------- 
+2021-04-19 17:04:48.593 — DEBUG — jeet — FastAPI — [/test] — [f0ec4ce1-2f00-4a64-8a94-63312f3a5790] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:04:48.594 — DEBUG — jeet — FastAPI — [/test] — [0d901752-452b-461f-82c5-244e346f4897] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:04:48.598 — DEBUG — jeet — FastAPI — [/test] — [8933af19-d151-4a34-be24-3c35819c1322] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:04:48.742 — DEBUG — jeet — FastAPI — [/test] — [f0ec4ce1-2f00-4a64-8a94-63312f3a5790] — schema_py.py:84 — file extension: png 
+2021-04-19 17:04:48.902 — DEBUG — jeet — FastAPI — [/test] — [0d901752-452b-461f-82c5-244e346f4897] — schema_py.py:84 — file extension: png 
+2021-04-19 17:04:48.937 — DEBUG — jeet — FastAPI — [/test] — [f0ec4ce1-2f00-4a64-8a94-63312f3a5790] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:04:48.937 — DEBUG — jeet — FastAPI — [/test] — [0d901752-452b-461f-82c5-244e346f4897] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:04:49.074 — DEBUG — jeet — FastAPI — [/test] — [8933af19-d151-4a34-be24-3c35819c1322] — schema_py.py:84 — file extension: png 
+2021-04-19 17:04:49.109 — DEBUG — jeet — FastAPI — [/test] — [8933af19-d151-4a34-be24-3c35819c1322] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:04:49.952 — DEBUG — jeet — FastAPI — [/test] — [81ead8e4-d5bc-49f5-8512-b18ad5947763] — main.py:28 — --------------start-------------- 
+2021-04-19 17:04:49.986 — DEBUG — jeet — FastAPI — [/test] — [81ead8e4-d5bc-49f5-8512-b18ad5947763] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:04:50.138 — DEBUG — jeet — FastAPI — [/test] — [81ead8e4-d5bc-49f5-8512-b18ad5947763] — schema_py.py:84 — file extension: png 
+2021-04-19 17:04:50.178 — DEBUG — jeet — FastAPI — [/test] — [81ead8e4-d5bc-49f5-8512-b18ad5947763] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:04:50.999 — DEBUG — jeet — FastAPI — [/test] — [e0ab0475-48ef-4cff-9ccc-6cdcc4e4c741] — main.py:28 — --------------start-------------- 
+2021-04-19 17:04:51.000 — DEBUG — jeet — FastAPI — [/test] — [d0dd9adf-c622-4143-92b8-c0a20f1c63ac] — main.py:28 — --------------start-------------- 
+2021-04-19 17:04:51.062 — DEBUG — jeet — FastAPI — [/test] — [e0ab0475-48ef-4cff-9ccc-6cdcc4e4c741] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:04:51.064 — DEBUG — jeet — FastAPI — [/test] — [d0dd9adf-c622-4143-92b8-c0a20f1c63ac] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:04:51.211 — DEBUG — jeet — FastAPI — [/test] — [e0ab0475-48ef-4cff-9ccc-6cdcc4e4c741] — schema_py.py:84 — file extension: png 
+2021-04-19 17:04:51.251 — DEBUG — jeet — FastAPI — [/test] — [e0ab0475-48ef-4cff-9ccc-6cdcc4e4c741] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:04:51.381 — DEBUG — jeet — FastAPI — [/test] — [d0dd9adf-c622-4143-92b8-c0a20f1c63ac] — schema_py.py:84 — file extension: png 
+2021-04-19 17:04:51.419 — DEBUG — jeet — FastAPI — [/test] — [d0dd9adf-c622-4143-92b8-c0a20f1c63ac] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:04:52.521 — DEBUG — jeet — FastAPI — [/test] — [a2bc084a-869e-4d56-bc85-4d262b0dfdb4] — main.py:28 — --------------start-------------- 
+2021-04-19 17:04:52.522 — DEBUG — jeet — FastAPI — [/test] — [5c82875b-647d-4b67-bb9f-e8f4ca9439ed] — main.py:28 — --------------start-------------- 
+2021-04-19 17:04:52.600 — DEBUG — jeet — FastAPI — [/test] — [a2bc084a-869e-4d56-bc85-4d262b0dfdb4] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:04:52.606 — DEBUG — jeet — FastAPI — [/test] — [5c82875b-647d-4b67-bb9f-e8f4ca9439ed] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:04:52.752 — DEBUG — jeet — FastAPI — [/test] — [a2bc084a-869e-4d56-bc85-4d262b0dfdb4] — schema_py.py:84 — file extension: png 
+2021-04-19 17:04:52.792 — DEBUG — jeet — FastAPI — [/test] — [a2bc084a-869e-4d56-bc85-4d262b0dfdb4] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:04:52.931 — DEBUG — jeet — FastAPI — [/test] — [5c82875b-647d-4b67-bb9f-e8f4ca9439ed] — schema_py.py:84 — file extension: png 
+2021-04-19 17:04:52.970 — DEBUG — jeet — FastAPI — [/test] — [5c82875b-647d-4b67-bb9f-e8f4ca9439ed] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:04:53.854 — DEBUG — jeet — FastAPI — [/test] — [f3bcd821-f1eb-4e29-9cea-343a222e77f6] — main.py:28 — --------------start-------------- 
+2021-04-19 17:04:53.854 — DEBUG — jeet — FastAPI — [/test] — [4cc5fd32-8262-4448-b4e7-d0dfa1aafc06] — main.py:28 — --------------start-------------- 
+2021-04-19 17:04:53.855 — DEBUG — jeet — FastAPI — [/test] — [b7310be3-e590-407f-9ea5-0ad1e36b1bd9] — main.py:28 — --------------start-------------- 
+2021-04-19 17:04:53.855 — DEBUG — jeet — FastAPI — [/test] — [2913943a-3c97-4f16-a71e-adfa5500e599] — main.py:28 — --------------start-------------- 
+2021-04-19 17:04:53.886 — DEBUG — jeet — FastAPI — [/test] — [e292b9a7-bd2e-42f5-9aa2-7108ab4b8378] — main.py:28 — --------------start-------------- 
+2021-04-19 17:04:53.995 — DEBUG — jeet — FastAPI — [/test] — [e292b9a7-bd2e-42f5-9aa2-7108ab4b8378] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:04:53.996 — DEBUG — jeet — FastAPI — [/test] — [4cc5fd32-8262-4448-b4e7-d0dfa1aafc06] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:04:54.006 — DEBUG — jeet — FastAPI — [/test] — [f3bcd821-f1eb-4e29-9cea-343a222e77f6] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:04:54.155 — DEBUG — jeet — FastAPI — [/test] — [4cc5fd32-8262-4448-b4e7-d0dfa1aafc06] — schema_py.py:84 — file extension: png 
+2021-04-19 17:04:54.197 — DEBUG — jeet — FastAPI — [/test] — [4cc5fd32-8262-4448-b4e7-d0dfa1aafc06] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:04:54.346 — DEBUG — jeet — FastAPI — [/test] — [e292b9a7-bd2e-42f5-9aa2-7108ab4b8378] — schema_py.py:84 — file extension: png 
+2021-04-19 17:04:54.390 — DEBUG — jeet — FastAPI — [/test] — [e292b9a7-bd2e-42f5-9aa2-7108ab4b8378] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:04:54.540 — DEBUG — jeet — FastAPI — [/test] — [f3bcd821-f1eb-4e29-9cea-343a222e77f6] — schema_py.py:84 — file extension: png 
+2021-04-19 17:04:54.581 — DEBUG — jeet — FastAPI — [/test] — [f3bcd821-f1eb-4e29-9cea-343a222e77f6] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:04:54.592 — DEBUG — jeet — FastAPI — [/test] — [b7310be3-e590-407f-9ea5-0ad1e36b1bd9] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:04:54.598 — DEBUG — jeet — FastAPI — [/test] — [2913943a-3c97-4f16-a71e-adfa5500e599] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:04:54.752 — DEBUG — jeet — FastAPI — [/test] — [b7310be3-e590-407f-9ea5-0ad1e36b1bd9] — schema_py.py:84 — file extension: png 
+2021-04-19 17:04:54.791 — DEBUG — jeet — FastAPI — [/test] — [b7310be3-e590-407f-9ea5-0ad1e36b1bd9] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:04:54.926 — DEBUG — jeet — FastAPI — [/test] — [2913943a-3c97-4f16-a71e-adfa5500e599] — schema_py.py:84 — file extension: png 
+2021-04-19 17:04:54.961 — DEBUG — jeet — FastAPI — [/test] — [2913943a-3c97-4f16-a71e-adfa5500e599] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:04:55.786 — DEBUG — jeet — FastAPI — [/test] — [6c005ec6-f749-473c-b5ad-e19b658f94d1] — main.py:28 — --------------start-------------- 
+2021-04-19 17:04:55.820 — DEBUG — jeet — FastAPI — [/test] — [6c005ec6-f749-473c-b5ad-e19b658f94d1] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:08:18.742 — DEBUG — jeet — FastAPI — [/test] — [e4bcd38c-d6cd-4337-905e-5a5bf2dea8f6] — main.py:28 — --------------start-------------- 
+2021-04-19 17:08:18.808 — DEBUG — jeet — FastAPI — [/test] — [e4bcd38c-d6cd-4337-905e-5a5bf2dea8f6] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:08:18.953 — DEBUG — jeet — FastAPI — [/test] — [e4bcd38c-d6cd-4337-905e-5a5bf2dea8f6] — schema_py.py:84 — file extension: png 
+2021-04-19 17:08:18.997 — DEBUG — jeet — FastAPI — [/test] — [e4bcd38c-d6cd-4337-905e-5a5bf2dea8f6] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:08:19.822 — DEBUG — jeet — FastAPI — [/test] — [1c9fd5d0-adac-4e74-8926-7e2d657789e2] — main.py:28 — --------------start-------------- 
+2021-04-19 17:08:19.853 — DEBUG — jeet — FastAPI — [/test] — [1c9fd5d0-adac-4e74-8926-7e2d657789e2] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:08:19.999 — DEBUG — jeet — FastAPI — [/test] — [1c9fd5d0-adac-4e74-8926-7e2d657789e2] — schema_py.py:84 — file extension: png 
+2021-04-19 17:08:20.042 — DEBUG — jeet — FastAPI — [/test] — [1c9fd5d0-adac-4e74-8926-7e2d657789e2] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:08:20.849 — DEBUG — jeet — FastAPI — [/test] — [4162d39f-a682-40f8-8063-a1544b3b06c6] — main.py:28 — --------------start-------------- 
+2021-04-19 17:08:20.880 — DEBUG — jeet — FastAPI — [/test] — [4162d39f-a682-40f8-8063-a1544b3b06c6] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:08:21.018 — DEBUG — jeet — FastAPI — [/test] — [4162d39f-a682-40f8-8063-a1544b3b06c6] — schema_py.py:84 — file extension: png 
+2021-04-19 17:08:21.057 — DEBUG — jeet — FastAPI — [/test] — [4162d39f-a682-40f8-8063-a1544b3b06c6] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:08:21.864 — DEBUG — jeet — FastAPI — [/test] — [2aee26e1-be79-493f-ad08-ed477d4aa29b] — main.py:28 — --------------start-------------- 
+2021-04-19 17:08:21.894 — DEBUG — jeet — FastAPI — [/test] — [2aee26e1-be79-493f-ad08-ed477d4aa29b] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:08:22.035 — DEBUG — jeet — FastAPI — [/test] — [2aee26e1-be79-493f-ad08-ed477d4aa29b] — schema_py.py:84 — file extension: png 
+2021-04-19 17:08:22.074 — DEBUG — jeet — FastAPI — [/test] — [2aee26e1-be79-493f-ad08-ed477d4aa29b] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:08:22.915 — DEBUG — jeet — FastAPI — [/test] — [dfbd11b8-362f-4d32-a7cf-82e1d4195d4c] — main.py:28 — --------------start-------------- 
+2021-04-19 17:08:22.948 — DEBUG — jeet — FastAPI — [/test] — [dfbd11b8-362f-4d32-a7cf-82e1d4195d4c] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:08:23.098 — DEBUG — jeet — FastAPI — [/test] — [dfbd11b8-362f-4d32-a7cf-82e1d4195d4c] — schema_py.py:84 — file extension: png 
+2021-04-19 17:08:23.140 — DEBUG — jeet — FastAPI — [/test] — [dfbd11b8-362f-4d32-a7cf-82e1d4195d4c] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:08:23.989 — DEBUG — jeet — FastAPI — [/test] — [6931aad7-268b-4637-991e-30467f1c9ee8] — main.py:28 — --------------start-------------- 
+2021-04-19 17:08:23.990 — DEBUG — jeet — FastAPI — [/test] — [51512f46-c79a-49ae-ba7d-9d93f1a0419c] — main.py:28 — --------------start-------------- 
+2021-04-19 17:08:24.056 — DEBUG — jeet — FastAPI — [/test] — [51512f46-c79a-49ae-ba7d-9d93f1a0419c] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:08:24.061 — DEBUG — jeet — FastAPI — [/test] — [6931aad7-268b-4637-991e-30467f1c9ee8] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:08:24.223 — DEBUG — jeet — FastAPI — [/test] — [51512f46-c79a-49ae-ba7d-9d93f1a0419c] — schema_py.py:84 — file extension: png 
+2021-04-19 17:08:24.267 — DEBUG — jeet — FastAPI — [/test] — [51512f46-c79a-49ae-ba7d-9d93f1a0419c] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:08:24.405 — DEBUG — jeet — FastAPI — [/test] — [6931aad7-268b-4637-991e-30467f1c9ee8] — schema_py.py:84 — file extension: png 
+2021-04-19 17:08:24.442 — DEBUG — jeet — FastAPI — [/test] — [6931aad7-268b-4637-991e-30467f1c9ee8] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:08:25.231 — DEBUG — jeet — FastAPI — [/test] — [bb5672ae-8ca8-429e-a0ee-5e91fa69bc78] — main.py:28 — --------------start-------------- 
+2021-04-19 17:08:25.262 — DEBUG — jeet — FastAPI — [/test] — [bb5672ae-8ca8-429e-a0ee-5e91fa69bc78] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:08:25.398 — DEBUG — jeet — FastAPI — [/test] — [bb5672ae-8ca8-429e-a0ee-5e91fa69bc78] — schema_py.py:84 — file extension: png 
+2021-04-19 17:08:25.437 — DEBUG — jeet — FastAPI — [/test] — [bb5672ae-8ca8-429e-a0ee-5e91fa69bc78] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:08:26.274 — DEBUG — jeet — FastAPI — [/test] — [aeeacbfd-b8f0-4aad-8ae1-f29bd244ecda] — main.py:28 — --------------start-------------- 
+2021-04-19 17:08:26.274 — DEBUG — jeet — FastAPI — [/test] — [04863201-56ee-4ba1-8f13-c1e0962041a2] — main.py:28 — --------------start-------------- 
+2021-04-19 17:08:26.353 — DEBUG — jeet — FastAPI — [/test] — [04863201-56ee-4ba1-8f13-c1e0962041a2] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:08:26.354 — DEBUG — jeet — FastAPI — [/test] — [aeeacbfd-b8f0-4aad-8ae1-f29bd244ecda] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:08:26.508 — DEBUG — jeet — FastAPI — [/test] — [aeeacbfd-b8f0-4aad-8ae1-f29bd244ecda] — schema_py.py:84 — file extension: png 
+2021-04-19 17:08:26.555 — DEBUG — jeet — FastAPI — [/test] — [aeeacbfd-b8f0-4aad-8ae1-f29bd244ecda] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:08:26.700 — DEBUG — jeet — FastAPI — [/test] — [04863201-56ee-4ba1-8f13-c1e0962041a2] — schema_py.py:84 — file extension: png 
+2021-04-19 17:08:26.743 — DEBUG — jeet — FastAPI — [/test] — [04863201-56ee-4ba1-8f13-c1e0962041a2] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:08:27.546 — DEBUG — jeet — FastAPI — [/test] — [e0cf724c-e6aa-47dc-bbb4-24417fa6f64c] — main.py:28 — --------------start-------------- 
+2021-04-19 17:08:27.547 — DEBUG — jeet — FastAPI — [/test] — [46ffcdd2-9aee-43e4-9c01-cc3736ae41d9] — main.py:28 — --------------start-------------- 
+2021-04-19 17:08:27.570 — DEBUG — jeet — FastAPI — [/test] — [0197b4f5-c289-4df5-9808-5e40b44dc85b] — main.py:28 — --------------start-------------- 
+2021-04-19 17:08:27.622 — DEBUG — jeet — FastAPI — [/test] — [e0cf724c-e6aa-47dc-bbb4-24417fa6f64c] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:08:27.768 — DEBUG — jeet — FastAPI — [/test] — [e0cf724c-e6aa-47dc-bbb4-24417fa6f64c] — schema_py.py:84 — file extension: png 
+2021-04-19 17:08:27.808 — DEBUG — jeet — FastAPI — [/test] — [e0cf724c-e6aa-47dc-bbb4-24417fa6f64c] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:08:27.813 — DEBUG — jeet — FastAPI — [/test] — [46ffcdd2-9aee-43e4-9c01-cc3736ae41d9] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:08:27.814 — DEBUG — jeet — FastAPI — [/test] — [0197b4f5-c289-4df5-9808-5e40b44dc85b] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:08:27.948 — DEBUG — jeet — FastAPI — [/test] — [46ffcdd2-9aee-43e4-9c01-cc3736ae41d9] — schema_py.py:84 — file extension: png 
+2021-04-19 17:08:28.110 — DEBUG — jeet — FastAPI — [/test] — [0197b4f5-c289-4df5-9808-5e40b44dc85b] — schema_py.py:84 — file extension: png 
+2021-04-19 17:08:28.145 — DEBUG — jeet — FastAPI — [/test] — [46ffcdd2-9aee-43e4-9c01-cc3736ae41d9] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:08:28.146 — DEBUG — jeet — FastAPI — [/test] — [0197b4f5-c289-4df5-9808-5e40b44dc85b] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:08:29.000 — DEBUG — jeet — FastAPI — [/test] — [ae1ed377-187f-49c1-9131-017b8e7763d5] — main.py:28 — --------------start-------------- 
+2021-04-19 17:08:29.000 — DEBUG — jeet — FastAPI — [/test] — [125d3fb0-c649-4a0c-89c0-1825e1927d03] — main.py:28 — --------------start-------------- 
+2021-04-19 17:08:29.075 — DEBUG — jeet — FastAPI — [/test] — [ae1ed377-187f-49c1-9131-017b8e7763d5] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:08:29.219 — DEBUG — jeet — FastAPI — [/test] — [ae1ed377-187f-49c1-9131-017b8e7763d5] — schema_py.py:84 — file extension: png 
+2021-04-19 17:08:29.262 — DEBUG — jeet — FastAPI — [/test] — [ae1ed377-187f-49c1-9131-017b8e7763d5] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:08:29.266 — DEBUG — jeet — FastAPI — [/test] — [125d3fb0-c649-4a0c-89c0-1825e1927d03] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:08:29.414 — DEBUG — jeet — FastAPI — [/test] — [125d3fb0-c649-4a0c-89c0-1825e1927d03] — schema_py.py:84 — file extension: png 
+2021-04-19 17:08:29.456 — DEBUG — jeet — FastAPI — [/test] — [125d3fb0-c649-4a0c-89c0-1825e1927d03] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:09:43.458 — DEBUG — jeet — FastAPI — [/docs] — [86824284-d84b-4d03-8e38-ee72db1bc437] — main.py:28 — --------------start-------------- 
+2021-04-19 17:09:43.461 — DEBUG — jeet — FastAPI — [/docs] — [86824284-d84b-4d03-8e38-ee72db1bc437] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:09:44.298 — DEBUG — jeet — FastAPI — [/openapi.json] — [b7bf07cb-09e2-45dd-9be8-323ac2fe6636] — main.py:28 — --------------start-------------- 
+2021-04-19 17:09:44.303 — DEBUG — jeet — FastAPI — [/openapi.json] — [b7bf07cb-09e2-45dd-9be8-323ac2fe6636] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:09:47.674 — DEBUG — jeet — FastAPI — [/test] — [7ae2e4c0-ae33-4810-bc96-e5d5d3cc8603] — main.py:28 — --------------start-------------- 
+2021-04-19 17:09:47.734 — DEBUG — jeet — FastAPI — [/test] — [7ae2e4c0-ae33-4810-bc96-e5d5d3cc8603] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:09:47.877 — DEBUG — jeet — FastAPI — [/test] — [7ae2e4c0-ae33-4810-bc96-e5d5d3cc8603] — schema_py.py:84 — file extension: png 
+2021-04-19 17:09:47.920 — DEBUG — jeet — FastAPI — [/test] — [7ae2e4c0-ae33-4810-bc96-e5d5d3cc8603] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:09:48.748 — DEBUG — jeet — FastAPI — [/test] — [3dbd7146-e93a-4e52-bb22-65cb8ae88fe1] — main.py:28 — --------------start-------------- 
+2021-04-19 17:09:48.787 — DEBUG — jeet — FastAPI — [/test] — [3dbd7146-e93a-4e52-bb22-65cb8ae88fe1] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:09:48.940 — DEBUG — jeet — FastAPI — [/test] — [3dbd7146-e93a-4e52-bb22-65cb8ae88fe1] — schema_py.py:84 — file extension: png 
+2021-04-19 17:09:48.986 — DEBUG — jeet — FastAPI — [/test] — [3dbd7146-e93a-4e52-bb22-65cb8ae88fe1] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:09:49.791 — DEBUG — jeet — FastAPI — [/test] — [5abc5b12-7257-462a-881a-cb4f51d90717] — main.py:28 — --------------start-------------- 
+2021-04-19 17:09:49.821 — DEBUG — jeet — FastAPI — [/test] — [5abc5b12-7257-462a-881a-cb4f51d90717] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:09:49.978 — DEBUG — jeet — FastAPI — [/test] — [5abc5b12-7257-462a-881a-cb4f51d90717] — schema_py.py:84 — file extension: png 
+2021-04-19 17:09:50.021 — DEBUG — jeet — FastAPI — [/test] — [5abc5b12-7257-462a-881a-cb4f51d90717] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:09:50.900 — DEBUG — jeet — FastAPI — [/test] — [2ab7bd43-d11e-48cb-b972-8fc30ba49a99] — main.py:28 — --------------start-------------- 
+2021-04-19 17:09:50.936 — DEBUG — jeet — FastAPI — [/test] — [2ab7bd43-d11e-48cb-b972-8fc30ba49a99] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:09:51.078 — DEBUG — jeet — FastAPI — [/test] — [2ab7bd43-d11e-48cb-b972-8fc30ba49a99] — schema_py.py:84 — file extension: png 
+2021-04-19 17:09:51.119 — DEBUG — jeet — FastAPI — [/test] — [2ab7bd43-d11e-48cb-b972-8fc30ba49a99] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:09:51.958 — DEBUG — jeet — FastAPI — [/test] — [fb6912c4-55b0-4fa0-a8fb-a30b13503718] — main.py:28 — --------------start-------------- 
+2021-04-19 17:09:51.987 — DEBUG — jeet — FastAPI — [/test] — [fb6912c4-55b0-4fa0-a8fb-a30b13503718] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:09:52.123 — DEBUG — jeet — FastAPI — [/test] — [fb6912c4-55b0-4fa0-a8fb-a30b13503718] — schema_py.py:84 — file extension: png 
+2021-04-19 17:09:52.163 — DEBUG — jeet — FastAPI — [/test] — [fb6912c4-55b0-4fa0-a8fb-a30b13503718] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:09:53.015 — DEBUG — jeet — FastAPI — [/test] — [d4a6abf7-02a4-4391-8d0b-40e91a1d8de6] — main.py:28 — --------------start-------------- 
+2021-04-19 17:09:53.052 — DEBUG — jeet — FastAPI — [/test] — [d4a6abf7-02a4-4391-8d0b-40e91a1d8de6] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:09:53.194 — DEBUG — jeet — FastAPI — [/test] — [d4a6abf7-02a4-4391-8d0b-40e91a1d8de6] — schema_py.py:84 — file extension: png 
+2021-04-19 17:09:53.234 — DEBUG — jeet — FastAPI — [/test] — [d4a6abf7-02a4-4391-8d0b-40e91a1d8de6] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:09:54.039 — DEBUG — jeet — FastAPI — [/test] — [b9d59bad-1cf5-4237-86a3-397366fb0f4b] — main.py:28 — --------------start-------------- 
+2021-04-19 17:09:54.068 — DEBUG — jeet — FastAPI — [/test] — [b9d59bad-1cf5-4237-86a3-397366fb0f4b] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:09:54.207 — DEBUG — jeet — FastAPI — [/test] — [b9d59bad-1cf5-4237-86a3-397366fb0f4b] — schema_py.py:84 — file extension: png 
+2021-04-19 17:09:54.246 — DEBUG — jeet — FastAPI — [/test] — [b9d59bad-1cf5-4237-86a3-397366fb0f4b] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:09:55.065 — DEBUG — jeet — FastAPI — [/test] — [ffddc337-35e6-489f-9576-4ab062b2d240] — main.py:28 — --------------start-------------- 
+2021-04-19 17:09:55.065 — DEBUG — jeet — FastAPI — [/test] — [c5ea09a3-cb47-40ca-9694-14fd9f9d9c55] — main.py:28 — --------------start-------------- 
+2021-04-19 17:09:55.124 — DEBUG — jeet — FastAPI — [/test] — [ffddc337-35e6-489f-9576-4ab062b2d240] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:09:55.124 — DEBUG — jeet — FastAPI — [/test] — [c5ea09a3-cb47-40ca-9694-14fd9f9d9c55] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:09:55.269 — DEBUG — jeet — FastAPI — [/test] — [c5ea09a3-cb47-40ca-9694-14fd9f9d9c55] — schema_py.py:84 — file extension: png 
+2021-04-19 17:09:55.433 — DEBUG — jeet — FastAPI — [/test] — [ffddc337-35e6-489f-9576-4ab062b2d240] — schema_py.py:84 — file extension: png 
+2021-04-19 17:09:55.469 — DEBUG — jeet — FastAPI — [/test] — [c5ea09a3-cb47-40ca-9694-14fd9f9d9c55] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:09:55.469 — DEBUG — jeet — FastAPI — [/test] — [ffddc337-35e6-489f-9576-4ab062b2d240] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:09:56.269 — DEBUG — jeet — FastAPI — [/test] — [ec53420f-c1d4-497b-a855-16b92965f832] — main.py:28 — --------------start-------------- 
+2021-04-19 17:09:56.297 — DEBUG — jeet — FastAPI — [/test] — [ec53420f-c1d4-497b-a855-16b92965f832] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:09:56.434 — DEBUG — jeet — FastAPI — [/test] — [ec53420f-c1d4-497b-a855-16b92965f832] — schema_py.py:84 — file extension: png 
+2021-04-19 17:09:56.473 — DEBUG — jeet — FastAPI — [/test] — [ec53420f-c1d4-497b-a855-16b92965f832] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:09:57.308 — DEBUG — jeet — FastAPI — [/test] — [81a5fa09-62aa-4014-a45b-7caaee009f24] — main.py:28 — --------------start-------------- 
+2021-04-19 17:09:57.328 — DEBUG — jeet — FastAPI — [/test] — [8ad877e5-3554-4aa2-bc41-12e2757bf552] — main.py:28 — --------------start-------------- 
+2021-04-19 17:09:57.358 — DEBUG — jeet — FastAPI — [/test] — [332e7e27-c4b9-48c8-bce0-181319234911] — main.py:28 — --------------start-------------- 
+2021-04-19 17:09:57.393 — DEBUG — jeet — FastAPI — [/test] — [81a5fa09-62aa-4014-a45b-7caaee009f24] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:09:57.397 — DEBUG — jeet — FastAPI — [/test] — [8ad877e5-3554-4aa2-bc41-12e2757bf552] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:09:57.545 — DEBUG — jeet — FastAPI — [/test] — [81a5fa09-62aa-4014-a45b-7caaee009f24] — schema_py.py:84 — file extension: png 
+2021-04-19 17:09:57.585 — DEBUG — jeet — FastAPI — [/test] — [81a5fa09-62aa-4014-a45b-7caaee009f24] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:09:57.716 — DEBUG — jeet — FastAPI — [/test] — [8ad877e5-3554-4aa2-bc41-12e2757bf552] — schema_py.py:84 — file extension: png 
+2021-04-19 17:09:57.751 — DEBUG — jeet — FastAPI — [/test] — [8ad877e5-3554-4aa2-bc41-12e2757bf552] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:09:57.753 — DEBUG — jeet — FastAPI — [/test] — [332e7e27-c4b9-48c8-bce0-181319234911] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:09:57.890 — DEBUG — jeet — FastAPI — [/test] — [332e7e27-c4b9-48c8-bce0-181319234911] — schema_py.py:84 — file extension: png 
+2021-04-19 17:09:57.924 — DEBUG — jeet — FastAPI — [/test] — [332e7e27-c4b9-48c8-bce0-181319234911] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:09:58.728 — DEBUG — jeet — FastAPI — [/test] — [6c29ecd6-db17-4016-8f14-17397521f9f1] — main.py:28 — --------------start-------------- 
+2021-04-19 17:09:58.728 — DEBUG — jeet — FastAPI — [/test] — [e2b77ea7-5d57-4fcb-ab8a-5e774d5672e4] — main.py:28 — --------------start-------------- 
+2021-04-19 17:09:58.729 — DEBUG — jeet — FastAPI — [/test] — [3b98f87c-68fe-4d17-a6fd-98febeb31582] — main.py:28 — --------------start-------------- 
+2021-04-19 17:09:58.729 — DEBUG — jeet — FastAPI — [/test] — [0b6bcd37-698b-46cd-9dfb-1deac42050ef] — main.py:28 — --------------start-------------- 
+2021-04-19 17:09:58.729 — DEBUG — jeet — FastAPI — [/test] — [e9a0150d-dea2-4302-9e68-510d76bfaaac] — main.py:28 — --------------start-------------- 
+2021-04-19 17:09:58.854 — DEBUG — jeet — FastAPI — [/test] — [3b98f87c-68fe-4d17-a6fd-98febeb31582] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:09:58.866 — DEBUG — jeet — FastAPI — [/test] — [6c29ecd6-db17-4016-8f14-17397521f9f1] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:09:59.020 — DEBUG — jeet — FastAPI — [/test] — [3b98f87c-68fe-4d17-a6fd-98febeb31582] — schema_py.py:84 — file extension: png 
+2021-04-19 17:09:59.064 — DEBUG — jeet — FastAPI — [/test] — [3b98f87c-68fe-4d17-a6fd-98febeb31582] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:09:59.068 — DEBUG — jeet — FastAPI — [/test] — [e2b77ea7-5d57-4fcb-ab8a-5e774d5672e4] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:09:59.072 — DEBUG — jeet — FastAPI — [/test] — [0b6bcd37-698b-46cd-9dfb-1deac42050ef] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:09:59.207 — DEBUG — jeet — FastAPI — [/test] — [6c29ecd6-db17-4016-8f14-17397521f9f1] — schema_py.py:84 — file extension: png 
+2021-04-19 17:09:59.243 — DEBUG — jeet — FastAPI — [/test] — [6c29ecd6-db17-4016-8f14-17397521f9f1] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:09:59.383 — DEBUG — jeet — FastAPI — [/test] — [e2b77ea7-5d57-4fcb-ab8a-5e774d5672e4] — schema_py.py:84 — file extension: png 
+2021-04-19 17:09:59.419 — DEBUG — jeet — FastAPI — [/test] — [e2b77ea7-5d57-4fcb-ab8a-5e774d5672e4] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:09:59.420 — DEBUG — jeet — FastAPI — [/test] — [e9a0150d-dea2-4302-9e68-510d76bfaaac] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:09:59.562 — DEBUG — jeet — FastAPI — [/test] — [0b6bcd37-698b-46cd-9dfb-1deac42050ef] — schema_py.py:84 — file extension: png 
+2021-04-19 17:09:59.597 — DEBUG — jeet — FastAPI — [/test] — [0b6bcd37-698b-46cd-9dfb-1deac42050ef] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:09:59.735 — DEBUG — jeet — FastAPI — [/test] — [e9a0150d-dea2-4302-9e68-510d76bfaaac] — schema_py.py:84 — file extension: png 
+2021-04-19 17:09:59.770 — DEBUG — jeet — FastAPI — [/test] — [e9a0150d-dea2-4302-9e68-510d76bfaaac] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:10:00.569 — DEBUG — jeet — FastAPI — [/test] — [38f77095-fde6-42ec-a5a4-a309a27bb08e] — main.py:28 — --------------start-------------- 
+2021-04-19 17:10:00.569 — DEBUG — jeet — FastAPI — [/test] — [165d669e-82a1-47b3-b6b9-80bb6ff18ebc] — main.py:28 — --------------start-------------- 
+2021-04-19 17:10:00.570 — DEBUG — jeet — FastAPI — [/test] — [c1e0aec0-1a71-46e9-8e9d-d970b4139bda] — main.py:28 — --------------start-------------- 
+2021-04-19 17:10:00.570 — DEBUG — jeet — FastAPI — [/test] — [6ce84459-4fed-448d-91a9-e7c11cfd8f6e] — main.py:28 — --------------start-------------- 
+2021-04-19 17:10:00.669 — DEBUG — jeet — FastAPI — [/test] — [86d27ff6-ecd7-4543-81d7-ceea8339ab4c] — main.py:28 — --------------start-------------- 
+2021-04-19 17:10:00.678 — DEBUG — jeet — FastAPI — [/test] — [c1e0aec0-1a71-46e9-8e9d-d970b4139bda] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:10:00.689 — DEBUG — jeet — FastAPI — [/test] — [38f77095-fde6-42ec-a5a4-a309a27bb08e] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:10:00.695 — DEBUG — jeet — FastAPI — [/test] — [165d669e-82a1-47b3-b6b9-80bb6ff18ebc] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:10:00.829 — DEBUG — jeet — FastAPI — [/test] — [c1e0aec0-1a71-46e9-8e9d-d970b4139bda] — schema_py.py:84 — file extension: png 
+2021-04-19 17:10:00.868 — DEBUG — jeet — FastAPI — [/test] — [c1e0aec0-1a71-46e9-8e9d-d970b4139bda] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:10:00.869 — DEBUG — jeet — FastAPI — [/test] — [6ce84459-4fed-448d-91a9-e7c11cfd8f6e] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:10:01.003 — DEBUG — jeet — FastAPI — [/test] — [38f77095-fde6-42ec-a5a4-a309a27bb08e] — schema_py.py:84 — file extension: png 
+2021-04-19 17:10:01.042 — DEBUG — jeet — FastAPI — [/test] — [38f77095-fde6-42ec-a5a4-a309a27bb08e] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:10:01.196 — DEBUG — jeet — FastAPI — [/test] — [165d669e-82a1-47b3-b6b9-80bb6ff18ebc] — schema_py.py:84 — file extension: png 
+2021-04-19 17:10:01.236 — DEBUG — jeet — FastAPI — [/test] — [165d669e-82a1-47b3-b6b9-80bb6ff18ebc] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:10:01.376 — DEBUG — jeet — FastAPI — [/test] — [6ce84459-4fed-448d-91a9-e7c11cfd8f6e] — schema_py.py:84 — file extension: png 
+2021-04-19 17:10:01.415 — DEBUG — jeet — FastAPI — [/test] — [6ce84459-4fed-448d-91a9-e7c11cfd8f6e] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:10:01.448 — DEBUG — jeet — FastAPI — [/test] — [86d27ff6-ecd7-4543-81d7-ceea8339ab4c] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:10:01.583 — DEBUG — jeet — FastAPI — [/test] — [86d27ff6-ecd7-4543-81d7-ceea8339ab4c] — schema_py.py:84 — file extension: png 
+2021-04-19 17:10:01.618 — DEBUG — jeet — FastAPI — [/test] — [86d27ff6-ecd7-4543-81d7-ceea8339ab4c] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:10:02.418 — DEBUG — jeet — FastAPI — [/test] — [8ba01fbe-bad1-4afa-a5d0-fcdc691efd8a] — main.py:28 — --------------start-------------- 
+2021-04-19 17:10:02.418 — DEBUG — jeet — FastAPI — [/test] — [fa2887b4-244a-4734-9894-e77c8944271a] — main.py:28 — --------------start-------------- 
+2021-04-19 17:10:02.419 — DEBUG — jeet — FastAPI — [/test] — [4a541125-dc82-4b2b-a277-e6532cd93b32] — main.py:28 — --------------start-------------- 
+2021-04-19 17:10:02.486 — DEBUG — jeet — FastAPI — [/test] — [4a541125-dc82-4b2b-a277-e6532cd93b32] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:10:02.625 — DEBUG — jeet — FastAPI — [/test] — [4a541125-dc82-4b2b-a277-e6532cd93b32] — schema_py.py:84 — file extension: png 
+2021-04-19 17:10:02.668 — DEBUG — jeet — FastAPI — [/test] — [4a541125-dc82-4b2b-a277-e6532cd93b32] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:10:02.674 — DEBUG — jeet — FastAPI — [/test] — [fa2887b4-244a-4734-9894-e77c8944271a] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:10:02.680 — DEBUG — jeet — FastAPI — [/test] — [8ba01fbe-bad1-4afa-a5d0-fcdc691efd8a] — main.py:85 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:10:02.809 — DEBUG — jeet — FastAPI — [/test] — [fa2887b4-244a-4734-9894-e77c8944271a] — schema_py.py:84 — file extension: png 
+2021-04-19 17:10:02.843 — DEBUG — jeet — FastAPI — [/test] — [fa2887b4-244a-4734-9894-e77c8944271a] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:10:02.978 — DEBUG — jeet — FastAPI — [/test] — [8ba01fbe-bad1-4afa-a5d0-fcdc691efd8a] — schema_py.py:84 — file extension: png 
+2021-04-19 17:10:03.013 — DEBUG — jeet — FastAPI — [/test] — [8ba01fbe-bad1-4afa-a5d0-fcdc691efd8a] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:10:03.868 — DEBUG — jeet — FastAPI — [/test] — [b39538cc-5ad9-4ebb-8161-3ab7e4e17067] — main.py:28 — --------------start-------------- 
+2021-04-19 17:10:03.869 — DEBUG — jeet — FastAPI — [/test] — [3a38a583-d9b5-4e89-812b-733797614b25] — main.py:28 — --------------start-------------- 
+2021-04-19 17:10:03.918 — DEBUG — jeet — FastAPI — [/test] — [b39538cc-5ad9-4ebb-8161-3ab7e4e17067] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:10:03.920 — DEBUG — jeet — FastAPI — [/test] — [3a38a583-d9b5-4e89-812b-733797614b25] — main.py:41 — ---------------end--------------- 
+2021-04-19 17:16:30.689 — DEBUG — jeet — FastAPI — [/test] — [4584e549-b441-48a9-8858-2a28d8fbf728] — main.py:28 — --------------start-------------- 
+2021-04-19 17:16:30.735 — DEBUG — jeet — FastAPI — [/test] — [4584e549-b441-48a9-8858-2a28d8fbf728] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:16:30.886 — DEBUG — jeet — FastAPI — [/test] — [4584e549-b441-48a9-8858-2a28d8fbf728] — schema_py.py:84 — file extension: png 
+2021-04-19 17:16:30.928 — DEBUG — jeet — FastAPI — [/test] — [4584e549-b441-48a9-8858-2a28d8fbf728] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:16:31.800 — DEBUG — jeet — FastAPI — [/test] — [a133fbf9-3ebf-4dee-aa95-f10b854b10cf] — main.py:28 — --------------start-------------- 
+2021-04-19 17:16:31.846 — DEBUG — jeet — FastAPI — [/test] — [a133fbf9-3ebf-4dee-aa95-f10b854b10cf] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:16:31.995 — DEBUG — jeet — FastAPI — [/test] — [a133fbf9-3ebf-4dee-aa95-f10b854b10cf] — schema_py.py:84 — file extension: png 
+2021-04-19 17:16:32.035 — DEBUG — jeet — FastAPI — [/test] — [a133fbf9-3ebf-4dee-aa95-f10b854b10cf] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:16:32.848 — DEBUG — jeet — FastAPI — [/test] — [07198f19-0560-42cb-90b5-94f14fa56abc] — main.py:28 — --------------start-------------- 
+2021-04-19 17:16:32.877 — DEBUG — jeet — FastAPI — [/test] — [07198f19-0560-42cb-90b5-94f14fa56abc] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:16:33.019 — DEBUG — jeet — FastAPI — [/test] — [07198f19-0560-42cb-90b5-94f14fa56abc] — schema_py.py:84 — file extension: png 
+2021-04-19 17:16:33.059 — DEBUG — jeet — FastAPI — [/test] — [07198f19-0560-42cb-90b5-94f14fa56abc] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:16:33.908 — DEBUG — jeet — FastAPI — [/test] — [a7ec804d-e524-431c-bd40-9b2e43afbf2d] — main.py:28 — --------------start-------------- 
+2021-04-19 17:16:33.944 — DEBUG — jeet — FastAPI — [/test] — [a7ec804d-e524-431c-bd40-9b2e43afbf2d] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:16:34.085 — DEBUG — jeet — FastAPI — [/test] — [a7ec804d-e524-431c-bd40-9b2e43afbf2d] — schema_py.py:84 — file extension: png 
+2021-04-19 17:16:34.125 — DEBUG — jeet — FastAPI — [/test] — [a7ec804d-e524-431c-bd40-9b2e43afbf2d] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:16:34.916 — DEBUG — jeet — FastAPI — [/test] — [cd8b9136-e354-438a-9ed3-6b9cebf251ba] — main.py:28 — --------------start-------------- 
+2021-04-19 17:16:34.946 — DEBUG — jeet — FastAPI — [/test] — [cd8b9136-e354-438a-9ed3-6b9cebf251ba] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:16:35.084 — DEBUG — jeet — FastAPI — [/test] — [cd8b9136-e354-438a-9ed3-6b9cebf251ba] — schema_py.py:84 — file extension: png 
+2021-04-19 17:16:35.123 — DEBUG — jeet — FastAPI — [/test] — [cd8b9136-e354-438a-9ed3-6b9cebf251ba] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:16:35.946 — DEBUG — jeet — FastAPI — [/test] — [8ade659b-aaf6-49dc-b074-c5b7723ab57e] — main.py:28 — --------------start-------------- 
+2021-04-19 17:16:35.983 — DEBUG — jeet — FastAPI — [/test] — [8ade659b-aaf6-49dc-b074-c5b7723ab57e] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:16:36.128 — DEBUG — jeet — FastAPI — [/test] — [8ade659b-aaf6-49dc-b074-c5b7723ab57e] — schema_py.py:84 — file extension: png 
+2021-04-19 17:16:36.169 — DEBUG — jeet — FastAPI — [/test] — [8ade659b-aaf6-49dc-b074-c5b7723ab57e] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:16:36.983 — DEBUG — jeet — FastAPI — [/test] — [5605cb12-adaf-4174-b289-3206076829cf] — main.py:28 — --------------start-------------- 
+2021-04-19 17:16:36.984 — DEBUG — jeet — FastAPI — [/test] — [494344c9-1ef6-4b7a-8e04-b55036740bb2] — main.py:28 — --------------start-------------- 
+2021-04-19 17:16:37.039 — DEBUG — jeet — FastAPI — [/test] — [494344c9-1ef6-4b7a-8e04-b55036740bb2] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:16:37.044 — DEBUG — jeet — FastAPI — [/test] — [5605cb12-adaf-4174-b289-3206076829cf] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:16:37.182 — DEBUG — jeet — FastAPI — [/test] — [494344c9-1ef6-4b7a-8e04-b55036740bb2] — schema_py.py:84 — file extension: png 
+2021-04-19 17:16:37.222 — DEBUG — jeet — FastAPI — [/test] — [494344c9-1ef6-4b7a-8e04-b55036740bb2] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:16:37.352 — DEBUG — jeet — FastAPI — [/test] — [5605cb12-adaf-4174-b289-3206076829cf] — schema_py.py:84 — file extension: png 
+2021-04-19 17:16:37.387 — DEBUG — jeet — FastAPI — [/test] — [5605cb12-adaf-4174-b289-3206076829cf] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:16:38.220 — DEBUG — jeet — FastAPI — [/test] — [606ee405-c650-4215-bf80-b36d3b8c26a4] — main.py:28 — --------------start-------------- 
+2021-04-19 17:16:38.221 — DEBUG — jeet — FastAPI — [/test] — [2e4976cb-7277-4528-9d8e-6875d46e656b] — main.py:28 — --------------start-------------- 
+2021-04-19 17:16:38.287 — DEBUG — jeet — FastAPI — [/test] — [2e4976cb-7277-4528-9d8e-6875d46e656b] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:16:38.288 — DEBUG — jeet — FastAPI — [/test] — [606ee405-c650-4215-bf80-b36d3b8c26a4] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:16:38.432 — DEBUG — jeet — FastAPI — [/test] — [2e4976cb-7277-4528-9d8e-6875d46e656b] — schema_py.py:84 — file extension: png 
+2021-04-19 17:16:38.594 — DEBUG — jeet — FastAPI — [/test] — [606ee405-c650-4215-bf80-b36d3b8c26a4] — schema_py.py:84 — file extension: png 
+2021-04-19 17:16:38.630 — DEBUG — jeet — FastAPI — [/test] — [2e4976cb-7277-4528-9d8e-6875d46e656b] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:16:38.630 — DEBUG — jeet — FastAPI — [/test] — [606ee405-c650-4215-bf80-b36d3b8c26a4] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:16:39.428 — DEBUG — jeet — FastAPI — [/test] — [7951acb7-5c36-48d1-88bb-a8f359d2471a] — main.py:28 — --------------start-------------- 
+2021-04-19 17:16:39.428 — DEBUG — jeet — FastAPI — [/test] — [d10ccf98-92ec-4e61-8f63-cb718d16696d] — main.py:28 — --------------start-------------- 
+2021-04-19 17:16:39.482 — DEBUG — jeet — FastAPI — [/test] — [7951acb7-5c36-48d1-88bb-a8f359d2471a] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:16:39.488 — DEBUG — jeet — FastAPI — [/test] — [d10ccf98-92ec-4e61-8f63-cb718d16696d] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:16:39.623 — DEBUG — jeet — FastAPI — [/test] — [7951acb7-5c36-48d1-88bb-a8f359d2471a] — schema_py.py:84 — file extension: png 
+2021-04-19 17:16:39.664 — DEBUG — jeet — FastAPI — [/test] — [7951acb7-5c36-48d1-88bb-a8f359d2471a] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:16:39.796 — DEBUG — jeet — FastAPI — [/test] — [d10ccf98-92ec-4e61-8f63-cb718d16696d] — schema_py.py:84 — file extension: png 
+2021-04-19 17:16:39.831 — DEBUG — jeet — FastAPI — [/test] — [d10ccf98-92ec-4e61-8f63-cb718d16696d] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:16:40.648 — DEBUG — jeet — FastAPI — [/test] — [d08e354b-0504-41c8-bfd8-0a1cf4b335f7] — main.py:28 — --------------start-------------- 
+2021-04-19 17:16:40.649 — DEBUG — jeet — FastAPI — [/test] — [051ddc6a-085e-4387-b559-27e5b6b9a1ed] — main.py:28 — --------------start-------------- 
+2021-04-19 17:16:40.675 — DEBUG — jeet — FastAPI — [/test] — [8f98ceed-b388-4674-8172-97c004f22415] — main.py:28 — --------------start-------------- 
+2021-04-19 17:16:40.736 — DEBUG — jeet — FastAPI — [/test] — [8f98ceed-b388-4674-8172-97c004f22415] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:16:40.739 — DEBUG — jeet — FastAPI — [/test] — [051ddc6a-085e-4387-b559-27e5b6b9a1ed] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:16:40.746 — DEBUG — jeet — FastAPI — [/test] — [d08e354b-0504-41c8-bfd8-0a1cf4b335f7] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:16:40.883 — DEBUG — jeet — FastAPI — [/test] — [8f98ceed-b388-4674-8172-97c004f22415] — schema_py.py:84 — file extension: png 
+2021-04-19 17:16:40.922 — DEBUG — jeet — FastAPI — [/test] — [8f98ceed-b388-4674-8172-97c004f22415] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:16:41.042 — DEBUG — jeet — FastAPI — [/test] — [051ddc6a-085e-4387-b559-27e5b6b9a1ed] — schema_py.py:84 — file extension: png 
+2021-04-19 17:16:41.077 — DEBUG — jeet — FastAPI — [/test] — [051ddc6a-085e-4387-b559-27e5b6b9a1ed] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:16:41.214 — DEBUG — jeet — FastAPI — [/test] — [d08e354b-0504-41c8-bfd8-0a1cf4b335f7] — schema_py.py:84 — file extension: png 
+2021-04-19 17:16:41.249 — DEBUG — jeet — FastAPI — [/test] — [d08e354b-0504-41c8-bfd8-0a1cf4b335f7] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:16:42.058 — DEBUG — jeet — FastAPI — [/test] — [812a05f7-d2a0-44e9-93b7-6bc117c9a0d4] — main.py:28 — --------------start-------------- 
+2021-04-19 17:16:42.058 — DEBUG — jeet — FastAPI — [/test] — [61652a90-0b7c-444a-9a76-63ed4c6610a1] — main.py:28 — --------------start-------------- 
+2021-04-19 17:16:42.079 — DEBUG — jeet — FastAPI — [/test] — [e87c8db3-54cf-4bcd-a239-9674a2ed6f48] — main.py:28 — --------------start-------------- 
+2021-04-19 17:16:42.148 — DEBUG — jeet — FastAPI — [/test] — [812a05f7-d2a0-44e9-93b7-6bc117c9a0d4] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:16:42.151 — DEBUG — jeet — FastAPI — [/test] — [e87c8db3-54cf-4bcd-a239-9674a2ed6f48] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:16:42.156 — DEBUG — jeet — FastAPI — [/test] — [61652a90-0b7c-444a-9a76-63ed4c6610a1] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:16:42.296 — DEBUG — jeet — FastAPI — [/test] — [812a05f7-d2a0-44e9-93b7-6bc117c9a0d4] — schema_py.py:84 — file extension: png 
+2021-04-19 17:16:42.336 — DEBUG — jeet — FastAPI — [/test] — [812a05f7-d2a0-44e9-93b7-6bc117c9a0d4] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:16:42.474 — DEBUG — jeet — FastAPI — [/test] — [e87c8db3-54cf-4bcd-a239-9674a2ed6f48] — schema_py.py:84 — file extension: png 
+2021-04-19 17:16:42.510 — DEBUG — jeet — FastAPI — [/test] — [e87c8db3-54cf-4bcd-a239-9674a2ed6f48] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:16:42.649 — DEBUG — jeet — FastAPI — [/test] — [61652a90-0b7c-444a-9a76-63ed4c6610a1] — schema_py.py:84 — file extension: png 
+2021-04-19 17:16:42.685 — DEBUG — jeet — FastAPI — [/test] — [61652a90-0b7c-444a-9a76-63ed4c6610a1] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:16:43.479 — DEBUG — jeet — FastAPI — [/test] — [9b596db3-0e43-4308-ba2a-1bb4743b4cee] — main.py:28 — --------------start-------------- 
+2021-04-19 17:16:43.509 — DEBUG — jeet — FastAPI — [/test] — [9b596db3-0e43-4308-ba2a-1bb4743b4cee] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:16:43.647 — DEBUG — jeet — FastAPI — [/test] — [9b596db3-0e43-4308-ba2a-1bb4743b4cee] — schema_py.py:84 — file extension: png 
+2021-04-19 17:16:43.689 — DEBUG — jeet — FastAPI — [/test] — [9b596db3-0e43-4308-ba2a-1bb4743b4cee] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:16:44.533 — DEBUG — jeet — FastAPI — [/test] — [414f615a-5980-483c-925d-3cf2c216801b] — main.py:28 — --------------start-------------- 
+2021-04-19 17:16:44.562 — DEBUG — jeet — FastAPI — [/test] — [414f615a-5980-483c-925d-3cf2c216801b] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:16:44.704 — DEBUG — jeet — FastAPI — [/test] — [414f615a-5980-483c-925d-3cf2c216801b] — schema_py.py:84 — file extension: png 
+2021-04-19 17:16:44.744 — DEBUG — jeet — FastAPI — [/test] — [414f615a-5980-483c-925d-3cf2c216801b] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:19:24.187 — DEBUG — jeet — FastAPI — [/test] — [6816d267-82b8-4262-bbb9-402b5634cc71] — main.py:28 — --------------start-------------- 
+2021-04-19 17:19:24.225 — DEBUG — jeet — FastAPI — [/test] — [6816d267-82b8-4262-bbb9-402b5634cc71] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:19:24.372 — DEBUG — jeet — FastAPI — [/test] — [6816d267-82b8-4262-bbb9-402b5634cc71] — schema_py.py:84 — file extension: png 
+2021-04-19 17:19:24.415 — DEBUG — jeet — FastAPI — [/test] — [6816d267-82b8-4262-bbb9-402b5634cc71] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:19:25.266 — DEBUG — jeet — FastAPI — [/test] — [c914dc06-a4a3-4885-97df-9c99aab2c008] — main.py:28 — --------------start-------------- 
+2021-04-19 17:19:25.300 — DEBUG — jeet — FastAPI — [/test] — [c914dc06-a4a3-4885-97df-9c99aab2c008] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:19:25.441 — DEBUG — jeet — FastAPI — [/test] — [c914dc06-a4a3-4885-97df-9c99aab2c008] — schema_py.py:84 — file extension: png 
+2021-04-19 17:19:25.481 — DEBUG — jeet — FastAPI — [/test] — [c914dc06-a4a3-4885-97df-9c99aab2c008] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:19:26.299 — DEBUG — jeet — FastAPI — [/test] — [7acd6db5-368d-44bd-829c-ed28589bc797] — main.py:28 — --------------start-------------- 
+2021-04-19 17:19:26.331 — DEBUG — jeet — FastAPI — [/test] — [7acd6db5-368d-44bd-829c-ed28589bc797] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:19:26.472 — DEBUG — jeet — FastAPI — [/test] — [7acd6db5-368d-44bd-829c-ed28589bc797] — schema_py.py:84 — file extension: png 
+2021-04-19 17:19:26.512 — DEBUG — jeet — FastAPI — [/test] — [7acd6db5-368d-44bd-829c-ed28589bc797] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:19:27.322 — DEBUG — jeet — FastAPI — [/test] — [a4b9af9b-83f2-469e-9e37-937357f57df1] — main.py:28 — --------------start-------------- 
+2021-04-19 17:19:27.353 — DEBUG — jeet — FastAPI — [/test] — [a4b9af9b-83f2-469e-9e37-937357f57df1] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:19:27.490 — DEBUG — jeet — FastAPI — [/test] — [a4b9af9b-83f2-469e-9e37-937357f57df1] — schema_py.py:84 — file extension: png 
+2021-04-19 17:19:27.530 — DEBUG — jeet — FastAPI — [/test] — [a4b9af9b-83f2-469e-9e37-937357f57df1] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:19:28.345 — DEBUG — jeet — FastAPI — [/test] — [823f163e-ee3a-4811-bb51-7e98eefd867b] — main.py:28 — --------------start-------------- 
+2021-04-19 17:19:28.376 — DEBUG — jeet — FastAPI — [/test] — [823f163e-ee3a-4811-bb51-7e98eefd867b] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:19:28.517 — DEBUG — jeet — FastAPI — [/test] — [823f163e-ee3a-4811-bb51-7e98eefd867b] — schema_py.py:84 — file extension: png 
+2021-04-19 17:19:28.557 — DEBUG — jeet — FastAPI — [/test] — [823f163e-ee3a-4811-bb51-7e98eefd867b] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:19:29.355 — DEBUG — jeet — FastAPI — [/test] — [ff722574-3cf0-420b-94d5-2d5e5ae883e6] — main.py:28 — --------------start-------------- 
+2021-04-19 17:19:29.356 — DEBUG — jeet — FastAPI — [/test] — [6ce737c1-62e7-487c-aad3-1cf97d467eae] — main.py:28 — --------------start-------------- 
+2021-04-19 17:19:29.412 — DEBUG — jeet — FastAPI — [/test] — [ff722574-3cf0-420b-94d5-2d5e5ae883e6] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:19:29.414 — DEBUG — jeet — FastAPI — [/test] — [6ce737c1-62e7-487c-aad3-1cf97d467eae] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:19:29.552 — DEBUG — jeet — FastAPI — [/test] — [ff722574-3cf0-420b-94d5-2d5e5ae883e6] — schema_py.py:84 — file extension: png 
+2021-04-19 17:19:29.593 — DEBUG — jeet — FastAPI — [/test] — [ff722574-3cf0-420b-94d5-2d5e5ae883e6] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:19:29.722 — DEBUG — jeet — FastAPI — [/test] — [6ce737c1-62e7-487c-aad3-1cf97d467eae] — schema_py.py:84 — file extension: png 
+2021-04-19 17:19:29.757 — DEBUG — jeet — FastAPI — [/test] — [6ce737c1-62e7-487c-aad3-1cf97d467eae] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:19:30.585 — DEBUG — jeet — FastAPI — [/test] — [51b79678-8e46-4267-aa2c-cd9876d9d87b] — main.py:28 — --------------start-------------- 
+2021-04-19 17:19:30.616 — DEBUG — jeet — FastAPI — [/test] — [51b79678-8e46-4267-aa2c-cd9876d9d87b] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:19:30.756 — DEBUG — jeet — FastAPI — [/test] — [51b79678-8e46-4267-aa2c-cd9876d9d87b] — schema_py.py:84 — file extension: png 
+2021-04-19 17:19:30.796 — DEBUG — jeet — FastAPI — [/test] — [51b79678-8e46-4267-aa2c-cd9876d9d87b] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:19:31.596 — DEBUG — jeet — FastAPI — [/test] — [b82ef993-559e-46f0-b853-96e71cab9a49] — main.py:28 — --------------start-------------- 
+2021-04-19 17:19:31.627 — DEBUG — jeet — FastAPI — [/test] — [b82ef993-559e-46f0-b853-96e71cab9a49] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:19:31.764 — DEBUG — jeet — FastAPI — [/test] — [b82ef993-559e-46f0-b853-96e71cab9a49] — schema_py.py:84 — file extension: png 
+2021-04-19 17:19:31.803 — DEBUG — jeet — FastAPI — [/test] — [b82ef993-559e-46f0-b853-96e71cab9a49] — main.py:40 — ---------------end--------------- 
+2021-04-19 17:19:32.619 — DEBUG — jeet — FastAPI — [/test] — [72f86616-21fc-4f8f-b351-623147685b1d] — main.py:28 — --------------start-------------- 
+2021-04-19 17:19:32.651 — DEBUG — jeet — FastAPI — [/test] — [72f86616-21fc-4f8f-b351-623147685b1d] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 17:19:32.791 — DEBUG — jeet — FastAPI — [/test] — [72f86616-21fc-4f8f-b351-623147685b1d] — schema_py.py:84 — file extension: png 
+2021-04-19 17:19:32.837 — DEBUG — jeet — FastAPI — [/test] — [72f86616-21fc-4f8f-b351-623147685b1d] — main.py:40 — ---------------end--------------- 
+2021-04-19 21:42:42.790 — DEBUG — jeet — FastAPI — [/docs] — [daca54b8-b3ba-40a2-930d-125d85265886] — main.py:28 — --------------start-------------- 
+2021-04-19 21:42:42.793 — DEBUG — jeet — FastAPI — [/docs] — [daca54b8-b3ba-40a2-930d-125d85265886] — main.py:40 — ---------------end--------------- 
+2021-04-19 21:42:43.582 — DEBUG — jeet — FastAPI — [/openapi.json] — [c04231cc-be54-44d3-9e1e-d8effb82958f] — main.py:28 — --------------start-------------- 
+2021-04-19 21:42:43.587 — DEBUG — jeet — FastAPI — [/openapi.json] — [c04231cc-be54-44d3-9e1e-d8effb82958f] — main.py:40 — ---------------end--------------- 
+2021-04-19 21:42:58.599 — DEBUG — jeet — FastAPI — [/test] — [27ff5683-9c56-4998-8aae-f8d35b396397] — main.py:28 — --------------start-------------- 
+2021-04-19 21:42:58.640 — DEBUG — jeet — FastAPI — [/test] — [27ff5683-9c56-4998-8aae-f8d35b396397] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 21:42:58.792 — DEBUG — jeet — FastAPI — [/test] — [27ff5683-9c56-4998-8aae-f8d35b396397] — schema_py.py:84 — file extension: png 
+2021-04-19 21:42:58.832 — DEBUG — jeet — FastAPI — [/test] — [27ff5683-9c56-4998-8aae-f8d35b396397] — main.py:40 — ---------------end--------------- 
+2021-04-19 21:42:59.711 — DEBUG — jeet — FastAPI — [/test] — [a7f4c4c5-b750-43ec-a1a3-1baf0a586de8] — main.py:28 — --------------start-------------- 
+2021-04-19 21:42:59.754 — DEBUG — jeet — FastAPI — [/test] — [a7f4c4c5-b750-43ec-a1a3-1baf0a586de8] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 21:42:59.902 — DEBUG — jeet — FastAPI — [/test] — [a7f4c4c5-b750-43ec-a1a3-1baf0a586de8] — schema_py.py:84 — file extension: png 
+2021-04-19 21:42:59.941 — DEBUG — jeet — FastAPI — [/test] — [a7f4c4c5-b750-43ec-a1a3-1baf0a586de8] — main.py:40 — ---------------end--------------- 
+2021-04-19 21:43:00.743 — DEBUG — jeet — FastAPI — [/test] — [4e79e5ac-217e-40f2-82d0-31d39307b4e8] — main.py:28 — --------------start-------------- 
+2021-04-19 21:43:00.774 — DEBUG — jeet — FastAPI — [/test] — [4e79e5ac-217e-40f2-82d0-31d39307b4e8] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 21:43:00.909 — DEBUG — jeet — FastAPI — [/test] — [4e79e5ac-217e-40f2-82d0-31d39307b4e8] — schema_py.py:84 — file extension: png 
+2021-04-19 21:43:00.949 — DEBUG — jeet — FastAPI — [/test] — [4e79e5ac-217e-40f2-82d0-31d39307b4e8] — main.py:40 — ---------------end--------------- 
+2021-04-19 21:43:01.784 — DEBUG — jeet — FastAPI — [/test] — [8c017656-0c45-4ca8-9843-94be6d43f7cf] — main.py:28 — --------------start-------------- 
+2021-04-19 21:43:01.813 — DEBUG — jeet — FastAPI — [/test] — [8c017656-0c45-4ca8-9843-94be6d43f7cf] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 21:43:01.956 — DEBUG — jeet — FastAPI — [/test] — [8c017656-0c45-4ca8-9843-94be6d43f7cf] — schema_py.py:84 — file extension: png 
+2021-04-19 21:43:01.998 — DEBUG — jeet — FastAPI — [/test] — [8c017656-0c45-4ca8-9843-94be6d43f7cf] — main.py:40 — ---------------end--------------- 
+2021-04-19 21:43:02.815 — DEBUG — jeet — FastAPI — [/test] — [3947f116-793a-4e70-99fb-7b8f2a2779e3] — main.py:28 — --------------start-------------- 
+2021-04-19 21:43:02.845 — DEBUG — jeet — FastAPI — [/test] — [3947f116-793a-4e70-99fb-7b8f2a2779e3] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 21:43:02.981 — DEBUG — jeet — FastAPI — [/test] — [3947f116-793a-4e70-99fb-7b8f2a2779e3] — schema_py.py:84 — file extension: png 
+2021-04-19 21:43:03.025 — DEBUG — jeet — FastAPI — [/test] — [3947f116-793a-4e70-99fb-7b8f2a2779e3] — main.py:40 — ---------------end--------------- 
+2021-04-19 21:43:03.874 — DEBUG — jeet — FastAPI — [/test] — [059c03c2-3161-4d68-99af-8e3b8123e02a] — main.py:28 — --------------start-------------- 
+2021-04-19 21:43:03.904 — DEBUG — jeet — FastAPI — [/test] — [059c03c2-3161-4d68-99af-8e3b8123e02a] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 21:43:04.060 — DEBUG — jeet — FastAPI — [/test] — [059c03c2-3161-4d68-99af-8e3b8123e02a] — schema_py.py:84 — file extension: png 
+2021-04-19 21:43:04.100 — DEBUG — jeet — FastAPI — [/test] — [059c03c2-3161-4d68-99af-8e3b8123e02a] — main.py:40 — ---------------end--------------- 
+2021-04-19 21:43:04.915 — DEBUG — jeet — FastAPI — [/test] — [fd614bf4-6fd5-4620-a79d-2448e18be9fc] — main.py:28 — --------------start-------------- 
+2021-04-19 21:43:04.916 — DEBUG — jeet — FastAPI — [/test] — [917310e4-8718-4f96-8355-4569d62bbee1] — main.py:28 — --------------start-------------- 
+2021-04-19 21:43:04.965 — DEBUG — jeet — FastAPI — [/test] — [fd614bf4-6fd5-4620-a79d-2448e18be9fc] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 21:43:04.973 — DEBUG — jeet — FastAPI — [/test] — [917310e4-8718-4f96-8355-4569d62bbee1] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 21:43:05.111 — DEBUG — jeet — FastAPI — [/test] — [fd614bf4-6fd5-4620-a79d-2448e18be9fc] — schema_py.py:84 — file extension: png 
+2021-04-19 21:43:05.151 — DEBUG — jeet — FastAPI — [/test] — [fd614bf4-6fd5-4620-a79d-2448e18be9fc] — main.py:40 — ---------------end--------------- 
+2021-04-19 21:43:05.279 — DEBUG — jeet — FastAPI — [/test] — [917310e4-8718-4f96-8355-4569d62bbee1] — schema_py.py:84 — file extension: png 
+2021-04-19 21:43:05.314 — DEBUG — jeet — FastAPI — [/test] — [917310e4-8718-4f96-8355-4569d62bbee1] — main.py:40 — ---------------end--------------- 
+2021-04-19 21:43:06.170 — DEBUG — jeet — FastAPI — [/test] — [888f9b73-e39f-40d0-9d27-6468028379e0] — main.py:28 — --------------start-------------- 
+2021-04-19 21:43:06.200 — DEBUG — jeet — FastAPI — [/test] — [888f9b73-e39f-40d0-9d27-6468028379e0] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 21:43:06.337 — DEBUG — jeet — FastAPI — [/test] — [888f9b73-e39f-40d0-9d27-6468028379e0] — schema_py.py:84 — file extension: png 
+2021-04-19 21:43:06.376 — DEBUG — jeet — FastAPI — [/test] — [888f9b73-e39f-40d0-9d27-6468028379e0] — main.py:40 — ---------------end--------------- 
+2021-04-19 21:43:07.192 — DEBUG — jeet — FastAPI — [/test] — [64a5e1a9-ae1a-40c0-b8f7-884da595a604] — main.py:28 — --------------start-------------- 
+2021-04-19 21:43:07.192 — DEBUG — jeet — FastAPI — [/test] — [7662342a-12cc-4646-b3ce-e70da0d7400c] — main.py:28 — --------------start-------------- 
+2021-04-19 21:43:07.246 — DEBUG — jeet — FastAPI — [/test] — [64a5e1a9-ae1a-40c0-b8f7-884da595a604] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 21:43:07.248 — DEBUG — jeet — FastAPI — [/test] — [7662342a-12cc-4646-b3ce-e70da0d7400c] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 21:43:07.387 — DEBUG — jeet — FastAPI — [/test] — [64a5e1a9-ae1a-40c0-b8f7-884da595a604] — schema_py.py:84 — file extension: png 
+2021-04-19 21:43:07.427 — DEBUG — jeet — FastAPI — [/test] — [64a5e1a9-ae1a-40c0-b8f7-884da595a604] — main.py:40 — ---------------end--------------- 
+2021-04-19 21:43:07.561 — DEBUG — jeet — FastAPI — [/test] — [7662342a-12cc-4646-b3ce-e70da0d7400c] — schema_py.py:84 — file extension: png 
+2021-04-19 21:43:07.603 — DEBUG — jeet — FastAPI — [/test] — [7662342a-12cc-4646-b3ce-e70da0d7400c] — main.py:40 — ---------------end--------------- 
+2021-04-19 21:43:08.418 — DEBUG — jeet — FastAPI — [/test] — [0c82ae8a-6c79-4525-a06b-165e4944bc00] — main.py:28 — --------------start-------------- 
+2021-04-19 21:43:08.418 — DEBUG — jeet — FastAPI — [/test] — [8dccc452-cbeb-4432-a4c3-24236c98f981] — main.py:28 — --------------start-------------- 
+2021-04-19 21:43:08.419 — DEBUG — jeet — FastAPI — [/test] — [cdfc0f58-c07d-4cf2-8e75-170940aa5e65] — main.py:28 — --------------start-------------- 
+2021-04-19 21:43:08.419 — DEBUG — jeet — FastAPI — [/test] — [47910d51-f0ce-4926-99ad-7d0e4cab97b6] — main.py:28 — --------------start-------------- 
+2021-04-19 21:43:08.521 — DEBUG — jeet — FastAPI — [/test] — [0c82ae8a-6c79-4525-a06b-165e4944bc00] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 21:43:08.524 — DEBUG — jeet — FastAPI — [/test] — [47910d51-f0ce-4926-99ad-7d0e4cab97b6] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 21:43:08.528 — DEBUG — jeet — FastAPI — [/test] — [cdfc0f58-c07d-4cf2-8e75-170940aa5e65] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 21:43:08.664 — DEBUG — jeet — FastAPI — [/test] — [0c82ae8a-6c79-4525-a06b-165e4944bc00] — schema_py.py:84 — file extension: png 
+2021-04-19 21:43:08.703 — DEBUG — jeet — FastAPI — [/test] — [0c82ae8a-6c79-4525-a06b-165e4944bc00] — main.py:40 — ---------------end--------------- 
+2021-04-19 21:43:08.828 — DEBUG — jeet — FastAPI — [/test] — [cdfc0f58-c07d-4cf2-8e75-170940aa5e65] — schema_py.py:84 — file extension: png 
+2021-04-19 21:43:08.984 — DEBUG — jeet — FastAPI — [/test] — [47910d51-f0ce-4926-99ad-7d0e4cab97b6] — schema_py.py:84 — file extension: png 
+2021-04-19 21:43:09.021 — DEBUG — jeet — FastAPI — [/test] — [cdfc0f58-c07d-4cf2-8e75-170940aa5e65] — main.py:40 — ---------------end--------------- 
+2021-04-19 21:43:09.021 — DEBUG — jeet — FastAPI — [/test] — [47910d51-f0ce-4926-99ad-7d0e4cab97b6] — main.py:40 — ---------------end--------------- 
+2021-04-19 21:43:09.029 — DEBUG — jeet — FastAPI — [/test] — [8dccc452-cbeb-4432-a4c3-24236c98f981] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 21:43:09.159 — DEBUG — jeet — FastAPI — [/test] — [8dccc452-cbeb-4432-a4c3-24236c98f981] — schema_py.py:84 — file extension: png 
+2021-04-19 21:43:09.194 — DEBUG — jeet — FastAPI — [/test] — [8dccc452-cbeb-4432-a4c3-24236c98f981] — main.py:40 — ---------------end--------------- 
+2021-04-19 21:43:10.025 — DEBUG — jeet — FastAPI — [/test] — [a584c3ea-28f6-4112-8cbd-c7b1019e8b6f] — main.py:28 — --------------start-------------- 
+2021-04-19 21:43:10.053 — DEBUG — jeet — FastAPI — [/test] — [a584c3ea-28f6-4112-8cbd-c7b1019e8b6f] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 21:43:10.192 — DEBUG — jeet — FastAPI — [/test] — [a584c3ea-28f6-4112-8cbd-c7b1019e8b6f] — schema_py.py:84 — file extension: png 
+2021-04-19 21:43:10.231 — DEBUG — jeet — FastAPI — [/test] — [a584c3ea-28f6-4112-8cbd-c7b1019e8b6f] — main.py:40 — ---------------end--------------- 
+2021-04-19 21:43:11.063 — DEBUG — jeet — FastAPI — [/test] — [8b87a437-3269-4056-81ad-358a78aa8239] — main.py:28 — --------------start-------------- 
+2021-04-19 21:43:11.063 — DEBUG — jeet — FastAPI — [/test] — [4f773cf7-1de4-43c0-a4b9-151937a3dca2] — main.py:28 — --------------start-------------- 
+2021-04-19 21:43:11.117 — DEBUG — jeet — FastAPI — [/test] — [4f773cf7-1de4-43c0-a4b9-151937a3dca2] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 21:43:11.272 — DEBUG — jeet — FastAPI — [/test] — [4f773cf7-1de4-43c0-a4b9-151937a3dca2] — schema_py.py:84 — file extension: png 
+2021-04-19 21:43:11.317 — DEBUG — jeet — FastAPI — [/test] — [4f773cf7-1de4-43c0-a4b9-151937a3dca2] — main.py:40 — ---------------end--------------- 
+2021-04-19 21:43:11.318 — DEBUG — jeet — FastAPI — [/test] — [8b87a437-3269-4056-81ad-358a78aa8239] — main.py:82 — {'reference_id': '456ad8', 'company_name': 'frslabs', 'resize_width': 50, 'resize_height': None, 'image_format': 'jpg', 'quality_check': True} 
+2021-04-19 21:43:11.451 — DEBUG — jeet — FastAPI — [/test] — [8b87a437-3269-4056-81ad-358a78aa8239] — schema_py.py:84 — file extension: png 
+2021-04-19 21:43:11.486 — DEBUG — jeet — FastAPI — [/test] — [8b87a437-3269-4056-81ad-358a78aa8239] — main.py:40 — ---------------end--------------- 
+2021-04-19 21:43:12.385 — DEBUG — jeet — FastAPI — [/test] — [e2920f76-a89f-4a0d-a292-fb03548c4f49] — main.py:28 — --------------start-------------- 
+2021-04-19 21:43:12.416 — DEBUG — jeet — FastAPI — [/test] — [e2920f76-a89f-4a0d-a292-fb03548c4f49] — main.py:40 — ---------------end--------------- 
+2021-04-19 21:45:19.111 — DEBUG — jeet — FastAPI — [/test] — [5e05dd2c-b867-4e27-acc5-728411882906] — main.py:28 — --------------start-------------- 
+2021-04-19 21:45:19.140 — DEBUG — jeet — FastAPI — [/test] — [5e05dd2c-b867-4e27-acc5-728411882906] — main.py:82 — {'reference_id': 'bbbb22', 'company_name': 'frs', 'resize_width': 50, 'resize_height': None, 'image_format': 'png', 'quality_check': True} 
+2021-04-19 21:45:19.304 — DEBUG — jeet — FastAPI — [/test] — [5e05dd2c-b867-4e27-acc5-728411882906] — schema_py.py:84 — file extension: png 
+2021-04-19 21:45:19.354 — DEBUG — jeet — FastAPI — [/test] — [5e05dd2c-b867-4e27-acc5-728411882906] — main.py:40 — ---------------end--------------- 
