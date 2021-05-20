@@ -1,7 +1,7 @@
 from pydantic import BaseModel, ValidationError, validator, root_validator
 from fastapi import UploadFile
 from typing import Optional
-import utils as sup
+from app import utils as sup
 import os
 import filetype
 from PIL import Image
@@ -10,6 +10,7 @@ from loguru import logger
 
 
 chunk_size = (5*1024*1024)
+
 
 class ImageSchema(BaseModel):
     reference_id : str

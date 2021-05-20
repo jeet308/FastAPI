@@ -4,10 +4,17 @@ import aiofiles
 import uuid
 
 project_root_path = os.path.dirname(os.path.abspath(__file__))
-data_path = os.path.join(project_root_path, 'data')
+data_path = os.path.join(project_root_path, '../data')
 
 if not os.path.isdir(data_path):
     os.mkdir(data_path)
+
+
+class ValidationException(Exception):
+    def __init__(self, exception):
+        self.errors_out = convert_error_pydantic(exception.errors()) # use with pydantic validation
+        # self.errors_out = utils.convert_error_marshmallow(exception.__dict__['messages']) # use with marshmallow validation
+
 
 def save_file(file):
     filename = str(uuid.uuid4())
@@ -16,6 +23,7 @@ def save_file(file):
     with open(file_path, "wb+") as file_object:
         file_object.write(file.file.read())
     return file_path
+
 
 async def save_file_aiof(file):
     filename = str(uuid.uuid4())
@@ -26,12 +34,14 @@ async def save_file_aiof(file):
         await out.write(contents)
     return file_path
 
+
 def convert_error_marshmallow(error):
     error_fields = []
     for key in error:
         message = ''.join(error[key])
         error_fields.append({key: {"message":message}})
     return {"type": "ValidationError", "message":None, "fields": error_fields}
+
 
 def convert_error_pydantic(exc):
     error_fields = []
@@ -98,7 +108,6 @@ class Example_422(BaseModel):
                 "status": "failed"
             }
         }
-
 
 
 class Example_504(BaseModel):
