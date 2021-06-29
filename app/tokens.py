@@ -1,8 +1,7 @@
-from app import schema_client
-from jose import JWTError, jwt
-from fastapi.security import OAuth2PasswordBearer
 from datetime import datetime, timedelta
 
+from fastapi.security import OAuth2PasswordBearer
+from jose import JWTError, jwt
 
 SECRET_KEY = "bfcaa24859af5279d4ec6c1de8f9d2624f6d819b020eba2bcd9fe0483af45ed3"
 ALGORITHM = "HS256"
@@ -25,8 +24,6 @@ def verify_token(token: str, credentials_exception):
         username: str = payload.get("sub")
         if username is None:
             raise credentials_exception
-        token_data = schema_client.TokenData(username=username)
+        # token_data = schema_client.TokenData(username=username)
     except JWTError:
         raise credentials_exception
-
-

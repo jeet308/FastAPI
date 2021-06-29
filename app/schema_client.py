@@ -1,5 +1,6 @@
-from pydantic import BaseModel, validator, ValidationError
 from typing import Optional
+
+from pydantic import BaseModel, validator
 
 
 class ClientSchema(BaseModel):
@@ -7,7 +8,7 @@ class ClientSchema(BaseModel):
     username: str
     password: str
 
-    @validator('username')
+    @validator("username")
     def company_name_validate(cls, v):
         if not v.isalpha():
             raise ValueError("company_name must be alphabetic only")
@@ -15,7 +16,7 @@ class ClientSchema(BaseModel):
             raise ValueError("company_name length must between 1 to 30 characters")
         return v
 
-    @validator('password')
+    @validator("password")
     def password_validate(cls, v):
         if len(v) < 8 and len(v) < 16:
             raise ValueError("password length must between 8 to 15 characters")
@@ -29,4 +30,3 @@ class Token(BaseModel):
 
 class TokenData(BaseModel):
     username: Optional[str] = None
-

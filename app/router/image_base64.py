@@ -1,41 +1,53 @@
-from fastapi import UploadFile, Form, File, APIRouter, Depends
-from typing import Optional
-from fastapi.responses import JSONResponse
-from PIL import Image
 import base64
-import time
 import io
+import time
 from datetime import datetime
+from typing import Optional
+
 import uvicorn
+from fastapi import APIRouter, Depends, File, Form, UploadFile
+from fastapi.responses import JSONResponse
 from loguru import logger
+from PIL import Image
+
+from app import models, oauth2
 from app import schema_py as sch
-from app import utils, models, oauth2
+from app import utils
+
+router = APIRouter(tags=["Image To Base64"])
 
 
-router = APIRouter(
-    tags=['Image To Base64']
+@router.post(
+    "/image-to-base64",
+    responses={
+        200: {"model": utils.Example_200},
+        422: {"model": utils.Example_422},
+        504: {"model": utils.Example_504},
+    },
 )
-
-
-@router.post("/image-to-base64", responses={200: {"model": utils.Example_200},
-                                            422: {"model": utils.Example_422},
-                                            504: {"model": utils.Example_504}})
 async def image_converter(
-        current_user: models.Client = Depends(oauth2.get_current_user),
-        reference_id: str = Form(..., description="=6 character alphanumeric value"),
-        company_name: str = Form(..., description="<30 character alphabetic value"),
-        resize_width: Optional[int] = Form(None, description="image resize width"),
-        resize_height: Optional[int] = Form(None, description="image resize height"),
-        image_format: Optional[str] = Form(..., description="any of [jpg, jpeg, png, tiff, tif, webp]"),
-        quality_check: bool = Form(True, description="image quality check"),
-        image_file: UploadFile = File(..., description="image file")):
+    current_user: models.Client = Depends(oauth2.get_current_user),
+    reference_id: str = Form(..., description="=6 character alphanumeric value"),
+    company_name: str = Form(..., description="<30 character alphabetic value"),
+    resize_width: Optional[int] = Form(None, description="image resize width"),
+    resize_height: Optional[int] = Form(None, description="image resize height"),
+    image_format: Optional[str] = Form(
+        ..., description="any of [jpg, jpeg, png, tiff, tif, webp]"
+    ),
+    quality_check: bool = Form(True, description="image quality check"),
+    image_file: UploadFile = File(..., description="image file"),
+):
 
-    logger.debug({"reference_id": reference_id,
-                  "company_name": company_name,
-                  "resize_width": resize_width,
-                  "resize_height": resize_height,
-                  "image_format": image_format,
-                  "quality_check": quality_check })
+    logger.debug(
+        {
+            "reference_id": reference_id,
+            "company_name": company_name,
+            "resize_width": resize_width,
+            "resize_height": resize_height,
+            "image_format": image_format,
+            "quality_check": quality_check,
+        }
+    )
 
     process_start_time = time.time()
 
@@ -64,7 +76,7 @@ async def image_converter(
             company_name=company_name,
             quality_check=quality_check,
             image_format=image_format,
-            image_file=image_path
+            image_file=image_path,
         )
 
     except sch.ValidationError as e:
@@ -72,20 +84,20 @@ async def image_converter(
 
     image = Image.fromarray(input_data.image_file)
 
-    if resize_width != None:
-        width_percent = (input_data.resize_width / float(image.size[0]))
-        image_height = int((float(image.size[1]) * float(width_percent)))
+    if resize_width is not None:
+        width_percent = input_data.resize_width / float(image.size[0])
+        image_height = int(float(image.size[1]) * float(width_percent))
         image = image.resize((input_data.resize_width, image_height), Image.ANTIALIAS)
     else:
-        height_percent = (input_data.resize_height / float(image.size[1]))
-        image_width = int((float(image.size[0]) * float(height_percent)))
+        height_percent = input_data.resize_height / float(image.size[1])
+        image_width = int(float(image.size[0]) * float(height_percent))
         image = image.resize((input_data.resize_height, image_width), Image.ANTIALIAS)
 
     buf = io.BytesIO()
 
-    image.save(buf, format='JPEG')
+    image.save(buf, format="JPEG")
     base64_string = base64.b64encode(buf.getvalue()).decode()
-    time_stamp = datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
+    time_stamp = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
 
     data = {
         "base64_string": base64_string,
@@ -99,8 +111,3 @@ async def image_converter(
 
 if __name__ == "__main__":
     uvicorn.run("app:app", host="localhost", port=8001)
-
-
-
-
-
